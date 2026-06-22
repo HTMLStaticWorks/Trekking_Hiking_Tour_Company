@@ -1,3 +1,601 @@
+<<<<<<< HEAD
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Premium Trekking & Hiking Tour Company offering mountain expeditions, camping, and adventure trails.">
+  <title>Home | Trekking & Hiking Tour Company</title>
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <style>
+    /* Page Specific Styles */
+    .hero {
+      height: 100vh;
+      background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('images/hero/hero-1.png') no-repeat center center/cover;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .hero-content {
+      color: #FFF;
+      max-width: 800px;
+      position: relative;
+      z-index: 2;
+    }
+    
+    .hero-title {
+      font-size: 4rem;
+      font-weight: 800;
+      margin-bottom: 20px;
+      line-height: 1.1;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+    
+    .hero-subtitle {
+      font-size: 1.2rem;
+      margin-bottom: 40px;
+      font-weight: 300;
+    }
+    
+    .hero-btns {
+      display: flex;
+      gap: 20px;
+    }
+    
+    .floating-stats {
+      position: absolute;
+      right: 5%;
+      bottom: 10%;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    
+    .stat-card {
+      padding: 20px;
+      border-radius: 15px;
+      text-align: center;
+      min-width: 150px;
+      animation: float 6s ease-in-out infinite;
+    }
+    
+    .stat-card:nth-child(2) {
+      animation-delay: 2s;
+    }
+    
+    .stat-card h3 {
+      font-size: 2rem;
+      color: var(--accent-color);
+      margin-bottom: 5px;
+    }
+    
+    .stat-card p {
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: #FFFFFF;
+    }
+    
+    .hero .btn-secondary {
+      color: #FFFFFF;
+      border-color: rgba(255, 255, 255, 0.4);
+    }
+    
+    .hero .btn-secondary:hover {
+      background: #FFFFFF;
+      color: var(--primary-color);
+      border-color: #FFFFFF;
+    }
+    
+    .dark-mode .hero .btn-secondary:hover {
+      background: var(--accent-color);
+      color: #FFFFFF;
+      border-color: var(--accent-color);
+    }
+    
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-20px); }
+      100% { transform: translateY(0px); }
+    }
+    
+    /* Features */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin-top: 50px;
+    }
+    
+    .feature-item {
+      padding: 40px 30px;
+      text-align: center;
+      border-radius: 20px;
+      background: var(--surface-color);
+      transition: all var(--transition-smooth);
+    }
+    
+    .dark-mode .feature-item {
+      background: #1a1a1a;
+    }
+    
+    .feature-item:hover {
+      transform: translateY(-10px);
+      box-shadow: var(--shadow-premium);
+      background: var(--primary-color);
+      color: #FFF;
+    }
+    
+    .feature-img-wrapper {
+      width: 100%;
+      height: 180px;
+      border-radius: 12px;
+      overflow: hidden;
+      margin-bottom: 20px;
+    }
+    
+    .feature-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform var(--transition-smooth);
+    }
+    
+    .feature-item:hover img {
+      transform: scale(1.05);
+    }
+    
+    /* Trek Cards */
+    .treks-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 40px;
+    }
+    
+    .trek-meta {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 15px;
+      color: var(--text-light);
+      font-size: 0.9rem;
+    }
+    
+    .trek-price {
+      font-size: 1.5rem;
+      color: var(--accent-color);
+      font-weight: 700;
+      margin: 15px 0;
+    }
+    
+    /* Stats Section */
+    .stats-section {
+      background: linear-gradient(rgba(27, 94, 32, 0.9), rgba(27, 94, 32, 0.9)), url('images/hero/hero-2.png') center/cover fixed;
+      color: #FFF;
+      text-align: center;
+    }
+    
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 30px;
+    }
+    
+    .stat-item i {
+      font-size: 3rem;
+      color: var(--accent-color);
+      margin-bottom: 20px;
+    }
+    
+    .counter-num {
+      font-size: 3.5rem;
+      font-family: var(--font-secondary);
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+    
+    /* Testimonials */
+    .testimonial-card {
+      padding: 40px;
+      text-align: center;
+    }
+    
+    .testimonial-card img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      margin: 0 auto 20px;
+      border: 3px solid var(--accent-color);
+    }
+    
+    .rating {
+      color: #FFD700;
+      margin-bottom: 15px;
+    }
+    
+    /* Newsletter */
+    .newsletter-section {
+      background: var(--surface-color);
+      border-radius: 30px;
+      padding: 80px 40px;
+      margin: 100px 20px;
+      text-align: center;
+    }
+    
+    .newsletter-form {
+      max-width: 600px;
+      margin: 40px auto 0;
+      display: flex;
+      gap: 10px;
+    }
+    
+    .newsletter-form input {
+      flex: 1;
+      padding: 15px 25px;
+      border-radius: 30px;
+      border: none;
+      box-shadow: var(--shadow-sm);
+    }
+    
+    @media (max-width: 768px) {
+      .hero {
+        height: auto;
+        min-height: 100vh;
+        padding-top: 100px;
+        padding-bottom: 40px;
+      }
+      .hero-title { font-size: 2.5rem; }
+      .floating-stats { 
+        position: relative;
+        right: auto;
+        bottom: auto;
+        margin-top: 40px;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+      }
+      .newsletter-form { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Page Loader -->
+  <div class="loader-wrapper">
+    <div class="loader"></div>
+  </div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <a href="index.html" class="logo">Trek<span>X</span></a>
+      
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="home2.html" class="nav-link">Home 2</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="packages.html" class="nav-link">Packages</a>
+        <a href="gallery.html" class="nav-link">Gallery</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="signup.html" class="nav-link">Sign Up</a>
+      </nav>
+      
+      <div class="controls">
+        <button class="icon-btn" id="theme-toggle" title="Toggle Dark/Light Mode" aria-label="Toggle Dark/Light Mode"><i class="fas fa-moon"></i></button>
+        <button class="icon-btn" id="rtl-toggle" title="Toggle RTL" style="font-size: 0.9rem; font-weight: 700; font-family: var(--font-text);" aria-label="Toggle RTL Layout">RTL</button>
+        <button class="mobile-toggle" aria-label="Open Mobile Menu"><i class="fas fa-bars"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero parallax" data-speed="0.3">
+    <div class="container">
+      <div class="hero-content anim-fade-up">
+        <h1 class="hero-title">Discover The<br>World's Beauty</h1>
+        <p class="hero-subtitle">Experience the ultimate adventure with our premium trekking and hiking tours designed for explorers of all levels.</p>
+        <div class="hero-btns">
+          <a href="packages.html" class="btn btn-primary">Explore Treks</a>
+          <a href="about.html" class="btn btn-secondary glass-effect">Learn More</a>
+        </div>
+      </div>
+      
+      <div class="floating-stats">
+        <div class="stat-card glass-effect">
+          <h3>15k+</h3>
+          <p>Happy Hikers</p>
+        </div>
+        <div class="stat-card glass-effect">
+          <h3>120+</h3>
+          <p>Premium Trails</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="section">
+    <div class="container">
+      <div class="text-center anim-fade-up">
+        <h2 class="section-title">Why Choose Us</h2>
+        <p class="section-subtitle">We provide world-class experiences with a focus on safety, professional guidance, and unforgettable moments.</p>
+      </div>
+      
+      <div class="features-grid">
+        <div class="feature-item anim-fade-up">
+          <div class="feature-img-wrapper">
+            <img src="images/features/expert-guides.png" alt="Expert Guides">
+          </div>
+          <h3>Expert Guides</h3>
+          <p>Our guides are certified professionals with years of experience traversing the toughest terrains.</p>
+        </div>
+        <div class="feature-item anim-fade-up" style="transition-delay: 0.2s">
+          <div class="feature-img-wrapper">
+            <img src="images/features/highest-safety.png" alt="Highest Safety">
+          </div>
+          <h3>Highest Safety</h3>
+          <p>We prioritize your safety with top-tier equipment and rigorous safety protocols on every trek.</p>
+        </div>
+        <div class="feature-item anim-fade-up" style="transition-delay: 0.4s">
+          <div class="feature-img-wrapper">
+            <img src="images/features/premium-gear.png" alt="Premium Gear">
+          </div>
+          <h3>Premium Gear</h3>
+          <p>Enjoy luxury camping and premium trekking gear included in all our signature adventure packages.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Popular Treks -->
+  <section class="section" style="background-color: var(--surface-color);">
+    <div class="container">
+      <div class="text-center anim-fade-up">
+        <h2 class="section-title">Popular Treks</h2>
+        <p class="section-subtitle">Explore our most sought-after hiking destinations carefully curated for the ultimate adventure.</p>
+      </div>
+      
+      <div class="treks-grid">
+        <!-- Trek 1 -->
+        <div class="premium-card anim-zoom-in">
+          <div class="card-img-wrapper">
+            <img src="images/treks/everest.png" alt="Snow Mountain Trek">
+          </div>
+          <div class="card-content">
+            <div class="trek-meta">
+              <span><i class="far fa-clock"></i> 7 Days</span>
+              <span><i class="fas fa-signal"></i> Advanced</span>
+            </div>
+            <h3>Everest Base Camp</h3>
+            <p class="trek-price">$1,499</p>
+            <p style="color: var(--text-light); margin-bottom: 20px;">Experience the majesty of the Himalayas on this iconic trek.</p>
+            <a href="#" class="btn btn-secondary">View Details</a>
+          </div>
+        </div>
+        
+        <!-- Trek 2 -->
+        <div class="premium-card anim-zoom-in" style="transition-delay: 0.2s">
+          <div class="card-img-wrapper">
+            <img src="images/treks/amazon.png" alt="Forest Trail">
+          </div>
+          <div class="card-content">
+            <div class="trek-meta">
+              <span><i class="far fa-clock"></i> 3 Days</span>
+              <span><i class="fas fa-signal"></i> Beginner</span>
+            </div>
+            <h3>Amazon Rainforest Trail</h3>
+            <p class="trek-price">$599</p>
+            <p style="color: var(--text-light); margin-bottom: 20px;">Immerse yourself in lush greenery and exotic wildlife.</p>
+            <a href="#" class="btn btn-secondary">View Details</a>
+          </div>
+        </div>
+        
+        <!-- Trek 3 -->
+        <div class="premium-card anim-zoom-in" style="transition-delay: 0.4s">
+          <div class="card-img-wrapper">
+            <img src="images/treks/rocky.png" alt="Camping Trek">
+          </div>
+          <div class="card-content">
+            <div class="trek-meta">
+              <span><i class="far fa-clock"></i> 5 Days</span>
+              <span><i class="fas fa-signal"></i> Intermediate</span>
+            </div>
+            <h3>Rocky Mountain Camping</h3>
+            <p class="trek-price">$899</p>
+            <p style="color: var(--text-light); margin-bottom: 20px;">Stunning alpine lakes and nights under the starry sky.</p>
+            <a href="#" class="btn btn-secondary">View Details</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="text-center" style="margin-top: 50px;">
+        <a href="destinations.html" class="btn btn-primary anim-fade-up">View All Destinations</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="section stats-section">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item anim-fade-up">
+          <i class="fas fa-users"></i>
+          <div class="counter-num" data-target="15420">0</div>
+          <p>Happy Adventurers</p>
+        </div>
+        <div class="stat-item anim-fade-up" style="transition-delay: 0.2s">
+          <i class="fas fa-map-marked-alt"></i>
+          <div class="counter-num" data-target="128">0</div>
+          <p>Trails Explored</p>
+        </div>
+        <div class="stat-item anim-fade-up" style="transition-delay: 0.4s">
+          <i class="fas fa-award"></i>
+          <div class="counter-num" data-target="25">0</div>
+          <p>Years Experience</p>
+        </div>
+        <div class="stat-item anim-fade-up" style="transition-delay: 0.6s">
+          <i class="fas fa-user-tie"></i>
+          <div class="counter-num" data-target="45">0</div>
+          <p>Expert Guides</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <div class="container">
+    <section class="newsletter-section anim-fade-up">
+      <h2 class="section-title">Subscribe To Our Newsletter</h2>
+      <p class="section-subtitle">Get the latest updates on new treks, exclusive offers, and adventure tips directly in your inbox.</p>
+      
+      <form class="newsletter-form" aria-label="Newsletter Subscription Form">
+        <input type="email" placeholder="Enter your email address" aria-label="Email Address" required>
+        <button type="submit" class="btn btn-primary">Subscribe Now</button>
+      </form>
+    </section>
+  </div>
+
+  <!-- Travel Tips Section -->
+  <section class="section" style="background: var(--surface-color);">
+    <div class="container">
+      <div class="text-center anim-fade-up">
+        <h2 class="section-title">Expert Travel Tips</h2>
+        <p class="section-subtitle">Essential advice to make your next adventure safe and unforgettable.</p>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px;">
+        <div class="premium-card anim-zoom-in">
+          <div class="card-img-wrapper">
+            <img src="images/tips/pack_like_a_pro.png" alt="Pack Like A Pro">
+          </div>
+          <div class="card-content">
+            <h3>Pack Like A Pro</h3>
+            <p style="color: var(--text-light);">Learn the art of minimalist packing for multi-day treks.</p>
+          </div>
+        </div>
+        <div class="premium-card anim-zoom-in" style="transition-delay: 0.2s;">
+          <div class="card-img-wrapper">
+            <img src="images/tips/altitude_sickness.png" alt="Altitude Sickness">
+          </div>
+          <div class="card-content">
+            <h3>Altitude Sickness</h3>
+            <p style="color: var(--text-light);">Prevention tips and acclimatization strategies for high altitudes.</p>
+          </div>
+        </div>
+        <div class="premium-card anim-zoom-in" style="transition-delay: 0.4s;">
+          <div class="card-img-wrapper">
+            <img src="images/tips/adventure_photography.png" alt="Adventure Photography">
+          </div>
+          <div class="card-content">
+            <h3>Adventure Photography</h3>
+            <p style="color: var(--text-light);">Capture stunning moments without risking your equipment.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Latest Blog Section -->
+  <section class="section">
+    <div class="container">
+      <div class="text-center anim-fade-up">
+        <h2 class="section-title">Latest Adventure News</h2>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px;">
+        <div class="anim-fade-right">
+          <img src="images/blog/swiss_alps.png" alt="Blog post thumbnail" style="border-radius: 20px; margin-bottom: 20px; box-shadow: var(--shadow-sm);">
+          <span style="color: var(--accent-color); font-weight: 600; font-size: 0.9rem;">June 15, 2026</span>
+          <h3 style="margin: 10px 0;">Conquering the Swiss Alps: A Guide</h3>
+          <p style="color: var(--text-light); margin-bottom: 15px;">An in-depth look at what it takes to navigate the treacherous but beautiful Swiss Alps during peak season.</p>
+          <a href="#" style="color: var(--primary-color); font-weight: 600;">Read More <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="anim-fade-left">
+          <img src="images/blog/asia_trails.png" alt="Blog post thumbnail" style="border-radius: 20px; margin-bottom: 20px; box-shadow: var(--shadow-sm);">
+          <span style="color: var(--accent-color); font-weight: 600; font-size: 0.9rem;">May 28, 2026</span>
+          <h3 style="margin: 10px 0;">Top 5 Unexplored Trails In Asia</h3>
+          <p style="color: var(--text-light); margin-bottom: 15px;">Escape the crowds and discover these hidden gems that offer pristine nature and authentic cultural encounters.</p>
+          <a href="#" style="color: var(--primary-color); font-weight: 600;">Read More <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="logo" style="margin-bottom: 20px; display: block;">Trek<span>X</span></a>
+          <p>We are the leading premium trekking and hiking tour company, dedicated to providing safe, thrilling, and luxurious outdoor adventures worldwide.</p>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Our Services</a></li>
+            <li><a href="packages.html">Trek Packages</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h4>Adventures</h4>
+          <ul class="footer-links">
+            <li><a href="#">Mountain Trekking</a></li>
+            <li><a href="#">Forest Trails</a></li>
+            <li><a href="#">Snow Expeditions</a></li>
+            <li><a href="#">Camping</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h4>Contact Info</h4>
+          <ul class="footer-links">
+            <li><i class="fas fa-map-marker-alt"></i> 123 Adventure Ave, NY 10001</li>
+            <li><i class="fas fa-phone-alt"></i> +1 (555) 123-4567</li>
+            <li><i class="fas fa-envelope"></i> info@trekX.com</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="bottom-footer">
+        <p>&copy; 2026 Trekking & Hiking Tour Company. All Rights Reserved.</p>
+        <div class="bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms & Conditions</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back To Top -->
+  <button id="back-to-top" class="back-to-top" title="Go to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <!-- JS -->
+  <script src="js/main.js"></script>
+  <script src="js/animations.js"></script>
+</body>
+</html>
+=======
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -555,3 +1153,4 @@
   <script src="js/animations.js"></script>
 </body>
 </html>
+>>>>>>> 1728c5929e24efd3ec13aa8be64f33881d01faf4
