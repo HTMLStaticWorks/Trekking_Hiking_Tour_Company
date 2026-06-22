@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | Trekking & Hiking Tour Company</title>
+  <meta name="description" content="Learn about TrekX, our experienced guides, and our mission to provide the best hiking adventures.">
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    .page-hero {
+      height: 60vh;
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/hero/hero-1.png') center/cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #FFF;
+    }
+    
+    .timeline {
+      position: relative;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .timeline::after {
+      content: '';
+      position: absolute;
+      width: 4px;
+      background-color: var(--primary-color);
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      margin-left: -2px;
+    }
+    .timeline-item {
+      padding: 20px 40px;
+      position: relative;
+      width: 50%;
+    }
+    .timeline-item::after {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      right: -10px;
+      background-color: var(--accent-color);
+      border: 4px solid var(--surface-color);
+      top: 25px;
+      border-radius: 50%;
+      z-index: 1;
+    }
+    .left { left: 0; }
+    .right { left: 50%; }
+    .right::after { left: -10px; }
+    
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+    .team-member {
+      text-align: center;
+    }
+    .team-member img {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 0 auto 20px;
+      border: 5px solid var(--primary-color);
+    }
+    
+    .partners-grid {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+      opacity: 0.6;
+    }
+    .partners-grid i { font-size: 4rem; }
+    
+    @media (max-width: 768px) {
+      .timeline::after { left: 31px; }
+      .timeline-item { width: 100%; padding-left: 70px; padding-right: 25px; }
+      .left::after, .right::after { left: 21px; }
+      .right { left: 0; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header placeholder -->
+  <header class="header sticky" style="background-color: var(--header-bg); padding: 15px 0;">
+    <div class="container">
+      <a href="index.html" class="logo" style="color: var(--text-color);">Trek<span>X</span></a>
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link" style="color: var(--text-color);">Home</a>
+        <a href="home2.html" class="nav-link" style="color: var(--text-color);">Home 2</a>
+        <a href="about.html" class="nav-link active" style="color: var(--text-color);">About Us</a>
+        <a href="services.html" class="nav-link" style="color: var(--text-color);">Services</a>
+        <a href="packages.html" class="nav-link" style="color: var(--text-color);">Packages</a>
+        <a href="gallery.html" class="nav-link" style="color: var(--text-color);">Gallery</a>
+        <a href="contact.html" class="nav-link" style="color: var(--text-color);">Contact</a>
+        <a href="signup.html" class="nav-link" style="color: var(--text-color);">Sign Up</a>
+      </nav>
+      <div class="controls">
+        <button class="icon-btn" id="theme-toggle" style="color: var(--text-color);" aria-label="Toggle Dark/Light Mode"><i class="fas fa-moon"></i></button>
+        <button class="icon-btn" id="rtl-toggle" title="Toggle RTL" style="color: var(--text-color); font-size: 0.9rem; font-weight: 700; font-family: var(--font-text);" aria-label="Toggle RTL Layout">RTL</button>
+        <button class="mobile-toggle" style="color: var(--text-color);" aria-label="Open Mobile Menu"><i class="fas fa-bars"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <section class="page-hero parallax">
+    <div class="container anim-zoom-in">
+      <h1 style="font-size: 3.5rem;">Our Story</h1>
+      <p>Discover the passion behind our premium adventures.</p>
+    </div>
+  </section>
+
+  <!-- Company Story -->
+  <section class="section">
+    <div class="container">
+      <div style="display: flex; flex-wrap: wrap; gap: 40px; align-items: center;">
+        <div style="flex: 1; min-width: 300px;" class="anim-fade-right">
+          <img src="images/hero/hero-2.png" alt="Our Story" style="border-radius: 20px; box-shadow: var(--shadow-lg);">
+        </div>
+        <div style="flex: 1; min-width: 300px;" class="anim-fade-left">
+          <h2 class="section-title">The Journey Began In 2001</h2>
+          <p style="margin-bottom: 20px; color: var(--text-light);">What started as a small group of enthusiastic hikers has evolved into the world's leading premium trekking company. We've spent the last two decades exploring uncharted territories to bring you the best experiences.</p>
+          <p style="color: var(--text-light);">We believe that the mountains have the power to transform lives. Our mission is to provide safe, exhilarating, and sustainable travel experiences.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Timeline -->
+  <section class="section" style="background: var(--surface-color);">
+    <div class="container">
+      <div class="text-center anim-fade-up">
+        <h2 class="section-title">Our Milestone Journey</h2>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item left anim-fade-right">
+          <div class="premium-card">
+            <div class="card-content">
+              <h3 style="color: var(--accent-color);">2001</h3>
+              <p>Company Founded in Colorado.</p>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-item right anim-fade-left">
+          <div class="premium-card">
+            <div class="card-content">
+              <h3 style="color: var(--accent-color);">2010</h3>
+              <p>Expanded to the Himalayas.</p>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-item left anim-fade-right">
+          <div class="premium-card">
+            <div class="card-content">
+              <h3 style="color: var(--accent-color);">2018</h3>
+              <p>Voted #1 Premium Adventure Co.</p>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-item right anim-fade-left">
+          <div class="premium-card">
+            <div class="card-content">
+              <h3 style="color: var(--accent-color);">2026</h3>
+              <p>Reaching 100k+ Happy Hikers.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Meet The Team -->
+  <section class="section">
+    <div class="container">
+      <div class="text-center anim-fade-up">
+        <h2 class="section-title">Meet Our Experts</h2>
+      </div>
+      <div class="team-grid">
+        <div class="team-member anim-zoom-in">
+          <img src="images/hero/hero-3.png" alt="Team">
+          <h3>John Doe</h3>
+          <p class="trek-price" style="font-size: 1rem; margin-top: 0;">Lead Guide</p>
+        </div>
+        <div class="team-member anim-zoom-in" style="transition-delay: 0.2s">
+          <img src="images/hero/hero-4.png" alt="Team">
+          <h3>Sarah Smith</h3>
+          <p class="trek-price" style="font-size: 1rem; margin-top: 0;">Expedition Coordinator</p>
+        </div>
+        <div class="team-member anim-zoom-in" style="transition-delay: 0.4s">
+          <img src="images/hero/hero-2.png" alt="Team">
+          <h3>Mike Johnson</h3>
+          <p class="trek-price" style="font-size: 1rem; margin-top: 0;">Safety Officer</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Partners -->
+  <section class="section" style="background: var(--surface-color);">
+    <div class="container text-center anim-fade-up">
+      <h2 class="section-title">Our Global Partners</h2>
+      <div class="partners-grid" style="margin-top: 40px;">
+        <i class="fab fa-aws"></i>
+        <i class="fab fa-apple"></i>
+        <i class="fab fa-google"></i>
+        <i class="fab fa-airbnb"></i>
+      </div>
+    </div>
+  </section>
+
+  <!-- Travel Tips Section -->
+  <section class="section" style="background: var(--surface-color);">
+    <div class="container">
+      <div class="text-center anim-fade-up">
+        <h2 class="section-title">Ethical Trekking</h2>
+        <p class="section-subtitle">How we preserve the mountains for future generations.</p>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px;">
+        <div class="premium-card anim-zoom-in">
+          <div class="card-content">
+            <i class="fas fa-leaf" style="font-size: 2rem; color: var(--accent-color); margin-bottom: 15px;"></i>
+            <h3>Leave No Trace</h3>
+            <p style="color: var(--text-light);">Our strict policy on waste management and minimizing footprint.</p>
+          </div>
+        </div>
+        <div class="premium-card anim-zoom-in" style="transition-delay: 0.2s;">
+          <div class="card-content">
+            <i class="fas fa-hands-helping" style="font-size: 2rem; color: var(--accent-color); margin-bottom: 15px;"></i>
+            <h3>Support Local</h3>
+            <p style="color: var(--text-light);">Empowering local communities through fair wages and ethical hiring.</p>
+          </div>
+        </div>
+        <div class="premium-card anim-zoom-in" style="transition-delay: 0.4s;">
+          <div class="card-content">
+            <i class="fas fa-paw" style="font-size: 2rem; color: var(--accent-color); margin-bottom: 15px;"></i>
+            <h3>Wildlife Respect</h3>
+            <p style="color: var(--text-light);">Guidelines on observing native fauna safely and respectfully.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Latest Blog Section -->
+  <section class="section">
+    <div class="container">
+      <div class="text-center anim-fade-up">
+        <h2 class="section-title">Latest Adventure News</h2>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px;">
+        <div class="anim-fade-right">
+          <img src="images/blog/our_story.jpg" alt="Blog post thumbnail" style="border-radius: 20px; margin-bottom: 20px; box-shadow: var(--shadow-sm);">
+          <span style="color: var(--accent-color); font-weight: 600; font-size: 0.9rem;">August 05, 2026</span>
+          <h3 style="margin: 10px 0;">How TrekX Started: Our Story</h3>
+          <p style="color: var(--text-light); margin-bottom: 15px;">A look back at how a small group of passionate hikers built a premium global adventure tour company.</p>
+          <a href="#" style="color: var(--primary-color); font-weight: 600;">Read More <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="anim-fade-left">
+          <img src="images/blog/veteran_guides.jpg" alt="Blog post thumbnail" style="border-radius: 20px; margin-bottom: 20px; box-shadow: var(--shadow-sm);">
+          <span style="color: var(--accent-color); font-weight: 600; font-size: 0.9rem;">July 22, 2026</span>
+          <h3 style="margin: 10px 0;">Meet Our Veteran Guides</h3>
+          <p style="color: var(--text-light); margin-bottom: 15px;">Get to know the experts who will be leading you safely across the toughest trails on the planet.</p>
+          <a href="#" style="color: var(--primary-color); font-weight: 600;">Read More <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="logo" style="margin-bottom: 20px; display: block;">Trek<span>X</span></a>
+          <p>We are the leading premium trekking and hiking tour company, dedicated to providing safe, thrilling, and luxurious outdoor adventures worldwide.</p>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Our Services</a></li>
+            <li><a href="packages.html">Trek Packages</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h4>Adventures</h4>
+          <ul class="footer-links">
+            <li><a href="#">Mountain Trekking</a></li>
+            <li><a href="#">Forest Trails</a></li>
+            <li><a href="#">Snow Expeditions</a></li>
+            <li><a href="#">Camping</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h4>Contact Info</h4>
+          <ul class="footer-links">
+            <li><i class="fas fa-map-marker-alt"></i> 123 Adventure Ave, NY 10001</li>
+            <li><i class="fas fa-phone-alt"></i> +1 (555) 123-4567</li>
+            <li><i class="fas fa-envelope"></i> info@trekX.com</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="bottom-footer">
+        <p>&copy; 2026 Trekking & Hiking Tour Company. All Rights Reserved.</p>
+        <div class="bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms & Conditions</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/animations.js"></script>
+</body>
+</html>
