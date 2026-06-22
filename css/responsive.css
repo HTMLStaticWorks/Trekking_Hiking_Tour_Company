@@ -99,8 +99,13 @@
     text-align: center;
   }
 
-  div:has(> img[alt="Blog"]) {
-    text-align: center;
+  div:has(> img[alt="Blog post thumbnail"]) {
+    text-align: left;
+  }
+
+  div:has(> img[alt="Blog post thumbnail"]) h3,
+  div:has(> img[alt="Blog post thumbnail"]) p {
+    text-align: left;
   }
 
   .info-item {

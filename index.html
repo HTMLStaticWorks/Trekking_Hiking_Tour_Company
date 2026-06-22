@@ -82,6 +82,24 @@
     .stat-card p {
       font-size: 0.9rem;
       font-weight: 500;
+      color: #FFFFFF;
+    }
+    
+    .hero .btn-secondary {
+      color: #FFFFFF;
+      border-color: rgba(255, 255, 255, 0.4);
+    }
+    
+    .hero .btn-secondary:hover {
+      background: #FFFFFF;
+      color: var(--primary-color);
+      border-color: #FFFFFF;
+    }
+    
+    .dark-mode .hero .btn-secondary:hover {
+      background: var(--accent-color);
+      color: #FFFFFF;
+      border-color: var(--accent-color);
     }
     
     @keyframes float {
@@ -117,14 +135,23 @@
       color: #FFF;
     }
     
-    .feature-item i {
-      font-size: 3rem;
-      color: var(--accent-color);
+    .feature-img-wrapper {
+      width: 100%;
+      height: 180px;
+      border-radius: 12px;
+      overflow: hidden;
       margin-bottom: 20px;
     }
     
-    .feature-item:hover i {
-      color: #FFF;
+    .feature-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform var(--transition-smooth);
+    }
+    
+    .feature-item:hover img {
+      transform: scale(1.05);
     }
     
     /* Trek Cards */
@@ -306,17 +333,23 @@
       
       <div class="features-grid">
         <div class="feature-item anim-fade-up">
-          <i class="fas fa-mountain"></i>
+          <div class="feature-img-wrapper">
+            <img src="images/features/expert-guides.png" alt="Expert Guides">
+          </div>
           <h3>Expert Guides</h3>
           <p>Our guides are certified professionals with years of experience traversing the toughest terrains.</p>
         </div>
         <div class="feature-item anim-fade-up" style="transition-delay: 0.2s">
-          <i class="fas fa-shield-alt"></i>
+          <div class="feature-img-wrapper">
+            <img src="images/features/highest-safety.png" alt="Highest Safety">
+          </div>
           <h3>Highest Safety</h3>
           <p>We prioritize your safety with top-tier equipment and rigorous safety protocols on every trek.</p>
         </div>
         <div class="feature-item anim-fade-up" style="transition-delay: 0.4s">
-          <i class="fas fa-campground"></i>
+          <div class="feature-img-wrapper">
+            <img src="images/features/premium-gear.png" alt="Premium Gear">
+          </div>
           <h3>Premium Gear</h3>
           <p>Enjoy luxury camping and premium trekking gear included in all our signature adventure packages.</p>
         </div>
@@ -441,22 +474,28 @@
       </div>
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px;">
         <div class="premium-card anim-zoom-in">
+          <div class="card-img-wrapper">
+            <img src="images/tips/pack_like_a_pro.png" alt="Pack Like A Pro">
+          </div>
           <div class="card-content">
-            <i class="fas fa-backpack" style="font-size: 2rem; color: var(--accent-color); margin-bottom: 15px;"></i>
             <h3>Pack Like A Pro</h3>
             <p style="color: var(--text-light);">Learn the art of minimalist packing for multi-day treks.</p>
           </div>
         </div>
         <div class="premium-card anim-zoom-in" style="transition-delay: 0.2s;">
+          <div class="card-img-wrapper">
+            <img src="images/tips/altitude_sickness.png" alt="Altitude Sickness">
+          </div>
           <div class="card-content">
-            <i class="fas fa-heartbeat" style="font-size: 2rem; color: var(--accent-color); margin-bottom: 15px;"></i>
             <h3>Altitude Sickness</h3>
             <p style="color: var(--text-light);">Prevention tips and acclimatization strategies for high altitudes.</p>
           </div>
         </div>
         <div class="premium-card anim-zoom-in" style="transition-delay: 0.4s;">
+          <div class="card-img-wrapper">
+            <img src="images/tips/adventure_photography.png" alt="Adventure Photography">
+          </div>
           <div class="card-content">
-            <i class="fas fa-camera" style="font-size: 2rem; color: var(--accent-color); margin-bottom: 15px;"></i>
             <h3>Adventure Photography</h3>
             <p style="color: var(--text-light);">Capture stunning moments without risking your equipment.</p>
           </div>

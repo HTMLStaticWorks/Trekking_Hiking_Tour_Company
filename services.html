@@ -60,6 +60,56 @@
       margin-bottom: 20px;
     }
     
+    .faq-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    
+    .faq-item {
+      background: var(--surface-color);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      transition: all 0.3s ease;
+    }
+    
+    .faq-item[open] {
+      box-shadow: var(--shadow-md);
+      border-color: var(--primary-color);
+    }
+    
+    .faq-item summary {
+      padding: 20px;
+      font-weight: 600;
+      font-size: 1.1rem;
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: var(--text-color);
+    }
+    
+    .faq-item summary::after {
+      content: '+';
+      font-size: 1.5rem;
+      color: var(--accent-color);
+      transition: transform 0.3s ease;
+    }
+    
+    .faq-item[open] summary::after {
+      content: '−';
+      transform: rotate(180deg);
+    }
+    
+    .faq-content {
+      padding: 0 20px 20px;
+      color: var(--text-light);
+      line-height: 1.6;
+    }
+    
   </style>
 </head>
 <body>
@@ -104,10 +154,10 @@
           <i class="fas fa-mountain service-icon"></i>
           <h2 class="section-title">Mountain Trekking</h2>
           <p style="color: var(--text-light); margin-bottom: 20px;">Challenge yourself with our guided mountain trekking expeditions. From beginner-friendly slopes to advanced technical climbs, we offer premium support and gear.</p>
-          <ul style="color: var(--text-light); margin-bottom: 20px; list-style: inside circle;">
-            <li>High altitude acclimatization</li>
-            <li>Professional sherpas and guides</li>
-            <li>Premium safety equipment</li>
+          <ul style="color: var(--text-light); margin-bottom: 20px; list-style: inside circle; line-height: 1.8;">
+            <li><strong>Altitude Acclimatization Protocols:</strong> Every route features built-in rest days and gradual elevation climbs to ensure your safety.</li>
+            <li><strong>Certified Sherpas & Guides:</strong> Lead guides are Wilderness First Responder (WFR) certified with deep regional knowledge.</li>
+            <li><strong>Advanced Safety Gear:</strong> Satellite tracking, oxygen, and emergency communications are standard on all climbs.</li>
           </ul>
           <a href="packages.html" class="btn btn-secondary">View Packages</a>
         </div>
@@ -122,6 +172,11 @@
           <i class="fas fa-campground service-icon"></i>
           <h2 class="section-title">Luxury Camping Tours</h2>
           <p style="color: var(--text-light); margin-bottom: 20px;">Experience nature without sacrificing comfort. Our glamping and luxury camping tours provide gourmet meals, comfortable beds, and stunning views under the stars.</p>
+          <ul style="color: var(--text-light); margin-bottom: 20px; list-style: inside circle; line-height: 1.8;">
+            <li><strong>Premium Glamping Accommodations:</strong> Rest easy in spacious, standing-height dome tents equipped with comfortable raised beds.</li>
+            <li><strong>Gourmet Wilderness Dining:</strong> Enjoy delicious, chef-prepared hot meals featuring fresh local ingredients.</li>
+            <li><strong>Evening Campfires & Stargazing:</strong> Unwind under the stars with hot beverages and cozy group gatherings.</li>
+          </ul>
           <a href="packages.html" class="btn btn-secondary">Explore Camping</a>
         </div>
       </div>
@@ -135,6 +190,11 @@
           <i class="fas fa-users service-icon"></i>
           <h2 class="section-title">Corporate Team Building</h2>
           <p style="color: var(--text-light); margin-bottom: 20px;">Strengthen your team's bond with our customized outdoor adventures. We design activities that promote leadership, communication, and trust.</p>
+          <ul style="color: var(--text-light); margin-bottom: 20px; list-style: inside circle; line-height: 1.8;">
+            <li><strong>Custom Facilitated Challenges:</strong> Tailored group activities focused on icebreaking, trust, and shared achievements.</li>
+            <li><strong>Leadership & Communication Workshops:</strong> Guided reflections to translate outdoor problem-solving back to the workspace.</li>
+            <li><strong>Outdoor Wilderness Survival Skills:</strong> Engaging practical training in navigation, shelter building, and campfire safety.</li>
+          </ul>
           <a href="contact.html" class="btn btn-secondary">Request Quote</a>
         </div>
       </div>
@@ -148,10 +208,51 @@
           <i class="fas fa-map service-icon"></i>
           <h2 class="section-title">Custom Travel Planning</h2>
           <p style="color: var(--text-light); margin-bottom: 20px;">Want a unique itinerary? Our expert travel planners will craft a bespoke adventure suited perfectly to your group's skills, timeline, and desires.</p>
+          <ul style="color: var(--text-light); margin-bottom: 20px; list-style: inside circle; line-height: 1.8;">
+            <li><strong>Private Route Consultations:</strong> One-on-one sessions with our travel specialists to co-create your dream path.</li>
+            <li><strong>Flexible Timing & Accommodations:</strong> Adjust schedules, trail intensities, and hotel tiers to suit your group.</li>
+            <li><strong>24/7 Remote Dispatch Support:</strong> Live tracking and support line available throughout your journey.</li>
+          </ul>
           <a href="contact.html" class="btn btn-secondary">Plan Your Trip</a>
         </div>
       </div>
 
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="section" style="background: var(--bg-color); border-top: 1px solid var(--border-color);">
+    <div class="container">
+      <div class="text-center anim-fade-up">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <p class="section-subtitle">Got questions about our services? Find your answers here.</p>
+      </div>
+      <div class="faq-grid" style="max-width: 800px; margin: 40px auto 0;">
+        <details class="faq-item anim-fade-up">
+          <summary>What is included in the premium trekking package?</summary>
+          <div class="faq-content">
+            <p>Our premium packages include professional certified guides, high-quality gear (tents, sleeping bags, and safety equipment), gourmet meals, permits, local transport, and emergency medical support including oxygen cylinders and satellite phones.</p>
+          </div>
+        </details>
+        <details class="faq-item anim-fade-up" style="transition-delay: 0.1s;">
+          <summary>Do I need previous climbing experience for mountain trekking?</summary>
+          <div class="faq-content">
+            <p>We cater to all skill levels. Our trekking itineraries are marked with difficulty ratings. While beginner trails require no prior experience (just basic physical fitness), advanced high-altitude treks require technical climbing training, which we can provide before the expedition.</p>
+          </div>
+        </details>
+        <details class="faq-item anim-fade-up" style="transition-delay: 0.2s;">
+          <summary>How do you ensure safety on high-altitude expeditions?</summary>
+          <div class="faq-content">
+            <p>Safety is our top priority. We maintain a 1:3 guide-to-client ratio, carry satellite communication gear, monitor vital signs daily for acute mountain sickness (AMS), and have a guaranteed helicopter evacuation plan in place for all high-altitude routes.</p>
+          </div>
+        </details>
+        <details class="faq-item anim-fade-up" style="transition-delay: 0.3s;">
+          <summary>Can we customize our group itinerary?</summary>
+          <div class="faq-content">
+            <p>Yes, absolutely! Through our Custom Travel Planning service, we can tailor the route, duration, accommodation style, and difficulty level to suit the specific needs and goals of your group.</p>
+          </div>
+        </details>
+      </div>
     </div>
   </section>
 
