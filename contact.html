@@ -142,10 +142,15 @@
         <a href="gallery.html" class="nav-link" style="color: var(--text-color);">Gallery</a>
         <a href="contact.html" class="nav-link active" style="color: var(--text-color);">Contact</a>
         <a href="signup.html" class="nav-link" style="color: var(--text-color);">Sign Up</a>
+        <a href="login.html" class="nav-link" style="color: var(--text-color);">Log In</a>
+        <div class="mobile-nav-controls">
+          <button class="icon-btn theme-toggle-btn" title="Toggle Dark/Light Mode" aria-label="Toggle Dark/Light Mode"><i class="fas fa-moon"></i></button>
+          <button class="icon-btn rtl-toggle-btn" title="Toggle RTL" style="font-size: 0.9rem; font-weight: 700; font-family: var(--font-text);" aria-label="Toggle RTL Layout">RTL</button>
+        </div>
       </nav>
       <div class="controls">
-        <button class="icon-btn" id="theme-toggle" style="color: var(--text-color);" aria-label="Toggle Dark/Light Mode"><i class="fas fa-moon"></i></button>
-        <button class="icon-btn" id="rtl-toggle" title="Toggle RTL" style="color: var(--text-color); font-size: 0.9rem; font-weight: 700; font-family: var(--font-text);" aria-label="Toggle RTL Layout">RTL</button>
+        <button class="icon-btn theme-toggle-btn" id="theme-toggle" style="color: var(--text-color);" aria-label="Toggle Dark/Light Mode"><i class="fas fa-moon"></i></button>
+        <button class="icon-btn rtl-toggle-btn" id="rtl-toggle" title="Toggle RTL" style="color: var(--text-color); font-size: 0.9rem; font-weight: 700; font-family: var(--font-text);" aria-label="Toggle RTL Layout">RTL</button>
         <button class="mobile-toggle" style="color: var(--text-color);" aria-label="Open Mobile Menu"><i class="fas fa-bars"></i></button>
       </div>
     </div>
@@ -178,7 +183,7 @@
             <div class="form-group">
               <textarea class="form-control" rows="6" placeholder="Your Message" required></textarea>
             </div>
-            <button type="submit" class="btn btn-primary">Send Message</button>
+            <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
           </form>
         </div>
         
@@ -288,16 +293,16 @@
       <div class="text-center anim-fade-up">
         <h2 class="section-title">Latest Adventure News</h2>
       </div>
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px;">
-        <div class="anim-fade-right">
-          <img src="images/blog/connected.jpg" alt="Blog post thumbnail" style="border-radius: 20px; margin-bottom: 20px; box-shadow: var(--shadow-sm);">
+      <div class="blog-grid">
+        <div class="blog-card anim-fade-right">
+          <img src="images/blog/connected.jpg" alt="Blog post thumbnail">
           <span style="color: var(--accent-color); font-weight: 600; font-size: 0.9rem;">December 02, 2026</span>
           <h3 style="margin: 10px 0;">How We Coordinate Large Group Tours</h3>
           <p style="color: var(--text-light); margin-bottom: 15px;">Planning a corporate retreat? Here is how our team seamlessly manages logistics for large groups.</p>
           <a href="#" style="color: var(--primary-color); font-weight: 600;">Read More <i class="fas fa-arrow-right"></i></a>
         </div>
-        <div class="anim-fade-left">
-          <img src="images/blog/emergency.jpg" alt="Blog post thumbnail" style="border-radius: 20px; margin-bottom: 20px; box-shadow: var(--shadow-sm);">
+        <div class="blog-card anim-fade-left">
+          <img src="images/blog/emergency.jpg" alt="Blog post thumbnail">
           <span style="color: var(--accent-color); font-weight: 600; font-size: 0.9rem;">November 18, 2026</span>
           <h3 style="margin: 10px 0;">24/7 Support on the Mountain: How It Works</h3>
           <p style="color: var(--text-light); margin-bottom: 15px;">Learn about the satellite technology and response protocols that keep you connected and safe.</p>

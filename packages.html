@@ -106,10 +106,15 @@
         <a href="gallery.html" class="nav-link" style="color: var(--text-color);">Gallery</a>
         <a href="contact.html" class="nav-link" style="color: var(--text-color);">Contact</a>
         <a href="signup.html" class="nav-link" style="color: var(--text-color);">Sign Up</a>
+        <a href="login.html" class="nav-link" style="color: var(--text-color);">Log In</a>
+        <div class="mobile-nav-controls">
+          <button class="icon-btn theme-toggle-btn" title="Toggle Dark/Light Mode" aria-label="Toggle Dark/Light Mode"><i class="fas fa-moon"></i></button>
+          <button class="icon-btn rtl-toggle-btn" title="Toggle RTL" style="font-size: 0.9rem; font-weight: 700; font-family: var(--font-text);" aria-label="Toggle RTL Layout">RTL</button>
+        </div>
       </nav>
       <div class="controls">
-        <button class="icon-btn" id="theme-toggle" style="color: var(--text-color);" aria-label="Toggle Dark/Light Mode"><i class="fas fa-moon"></i></button>
-        <button class="icon-btn" id="rtl-toggle" title="Toggle RTL" style="color: var(--text-color); font-size: 0.9rem; font-weight: 700; font-family: var(--font-text);" aria-label="Toggle RTL Layout">RTL</button>
+        <button class="icon-btn theme-toggle-btn" id="theme-toggle" style="color: var(--text-color);" aria-label="Toggle Dark/Light Mode"><i class="fas fa-moon"></i></button>
+        <button class="icon-btn rtl-toggle-btn" id="rtl-toggle" title="Toggle RTL" style="color: var(--text-color); font-size: 0.9rem; font-weight: 700; font-family: var(--font-text);" aria-label="Toggle RTL Layout">RTL</button>
         <button class="mobile-toggle" style="color: var(--text-color);" aria-label="Open Mobile Menu"><i class="fas fa-bars"></i></button>
       </div>
     </div>
@@ -142,6 +147,13 @@
             <h3>Meadow Valley Camp</h3><p class="trek-price">$399</p>
           </div>
         </div>
+        <div class="premium-card anim-zoom-in" style="transition-delay: 0.4s">
+          <div class="card-img-wrapper"><img src="images/treks/amazon.png" alt="Beginner Trek"></div>
+          <div class="card-content">
+            <div class="trek-meta"><span>3 Days</span><span>Easy</span></div>
+            <h3>Amazon Rainforest Trail</h3><p class="trek-price">$599</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -165,6 +177,13 @@
             <h3>Glacier View Trek</h3><p class="trek-price">$899</p>
           </div>
         </div>
+        <div class="premium-card anim-zoom-in" style="transition-delay: 0.4s">
+          <div class="card-img-wrapper"><img src="images/treks/fjordlands_explorer.png" alt="Inter Trek"></div>
+          <div class="card-content">
+            <div class="trek-meta"><span>4 Days</span><span>Moderate</span></div>
+            <h3>Fjordlands Explorer</h3><p class="trek-price">$549</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -186,6 +205,13 @@
           <div class="card-content">
             <div class="trek-meta"><span>8 Days</span><span>Difficult</span></div>
             <h3>Kilimanjaro Summit</h3><p class="trek-price">$1,899</p>
+          </div>
+        </div>
+        <div class="premium-card anim-zoom-in" style="transition-delay: 0.4s">
+          <div class="card-img-wrapper"><img src="images/treks/patagonia_wilderness.png" alt="Adv Trek"></div>
+          <div class="card-content">
+            <div class="trek-meta"><span>12 Days</span><span>Difficult</span></div>
+            <h3>Patagonia Wilderness</h3><p class="trek-price">$1,299</p>
           </div>
         </div>
       </div>
@@ -288,16 +314,16 @@
       <div class="text-center anim-fade-up">
         <h2 class="section-title">Latest Adventure News</h2>
       </div>
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px;">
-        <div class="anim-fade-right">
-          <img src="images/blog/treks.jpg" alt="Blog post thumbnail" style="border-radius: 20px; margin-bottom: 20px; box-shadow: var(--shadow-sm);">
+      <div class="blog-grid">
+        <div class="blog-card anim-fade-right">
+          <img src="images/blog/treks.jpg" alt="Blog post thumbnail">
           <span style="color: var(--accent-color); font-weight: 600; font-size: 0.9rem;">September 04, 2026</span>
           <h3 style="margin: 10px 0;">3-Day vs 7-Day Treks: Which is Right For You?</h3>
           <p style="color: var(--text-light); margin-bottom: 15px;">Deciding on trip length can be tricky. We break down the pros and cons of short versus long expeditions.</p>
           <a href="#" style="color: var(--primary-color); font-weight: 600;">Read More <i class="fas fa-arrow-right"></i></a>
         </div>
-        <div class="anim-fade-left">
-          <img src="images/blog/budget.jpg" alt="Blog post thumbnail" style="border-radius: 20px; margin-bottom: 20px; box-shadow: var(--shadow-sm);">
+        <div class="blog-card anim-fade-left">
+          <img src="images/blog/budget.jpg" alt="Blog post thumbnail">
           <span style="color: var(--accent-color); font-weight: 600; font-size: 0.9rem;">August 25, 2026</span>
           <h3 style="margin: 10px 0;">How to Budget for an International Expedition</h3>
           <p style="color: var(--text-light); margin-bottom: 15px;">From permits to flights, here is everything you need to factor into your adventure budget.</p>

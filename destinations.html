@@ -95,10 +95,15 @@
         <a href="gallery.html" class="nav-link" style="color: var(--text-color);">Gallery</a>
         <a href="contact.html" class="nav-link" style="color: var(--text-color);">Contact</a>
         <a href="signup.html" class="nav-link" style="color: var(--text-color);">Sign Up</a>
+        <a href="login.html" class="nav-link" style="color: var(--text-color);">Log In</a>
+        <div class="mobile-nav-controls">
+          <button class="icon-btn theme-toggle-btn" title="Toggle Dark/Light Mode" aria-label="Toggle Dark/Light Mode"><i class="fas fa-moon"></i></button>
+          <button class="icon-btn rtl-toggle-btn" title="Toggle RTL" style="font-size: 0.9rem; font-weight: 700; font-family: var(--font-text);" aria-label="Toggle RTL Layout">RTL</button>
+        </div>
       </nav>
       <div class="controls">
-        <button class="icon-btn" id="theme-toggle" style="color: var(--text-color);" aria-label="Toggle Dark/Light Mode"><i class="fas fa-moon"></i></button>
-        <button class="icon-btn" id="rtl-toggle" title="Toggle RTL" style="color: var(--text-color); font-size: 0.9rem; font-weight: 700; font-family: var(--font-text);" aria-label="Toggle RTL Layout">RTL</button>
+        <button class="icon-btn theme-toggle-btn" id="theme-toggle" style="color: var(--text-color);" aria-label="Toggle Dark/Light Mode"><i class="fas fa-moon"></i></button>
+        <button class="icon-btn rtl-toggle-btn" id="rtl-toggle" title="Toggle RTL" style="color: var(--text-color); font-size: 0.9rem; font-weight: 700; font-family: var(--font-text);" aria-label="Toggle RTL Layout">RTL</button>
         <button class="mobile-toggle" style="color: var(--text-color);" aria-label="Open Mobile Menu"><i class="fas fa-bars"></i></button>
       </div>
     </div>
@@ -205,16 +210,16 @@
       <div class="text-center anim-fade-up">
         <h2 class="section-title">Latest Adventure News</h2>
       </div>
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px;">
-        <div class="anim-fade-right">
-          <img src="images/blog/patagonia.jpg" alt="Blog post thumbnail" style="border-radius: 20px; margin-bottom: 20px; box-shadow: var(--shadow-sm);">
+      <div class="blog-grid">
+        <div class="blog-card anim-fade-right">
+          <img src="images/blog/patagonia.jpg" alt="Blog post thumbnail">
           <span style="color: var(--accent-color); font-weight: 600; font-size: 0.9rem;">October 15, 2026</span>
           <h3 style="margin: 10px 0;">Patagonia: The Ultimate Travel Guide</h3>
           <p style="color: var(--text-light); margin-bottom: 15px;">Everything you need to know about traversing the rugged and breathtaking landscapes of Patagonia.</p>
           <a href="#" style="color: var(--primary-color); font-weight: 600;">Read More <i class="fas fa-arrow-right"></i></a>
         </div>
-        <div class="anim-fade-left">
-          <img src="images/blog/iceland.jpg" alt="Blog post thumbnail" style="border-radius: 20px; margin-bottom: 20px; box-shadow: var(--shadow-sm);">
+        <div class="blog-card anim-fade-left">
+          <img src="images/blog/iceland.jpg" alt="Blog post thumbnail">
           <span style="color: var(--accent-color); font-weight: 600; font-size: 0.9rem;">September 28, 2026</span>
           <h3 style="margin: 10px 0;">Hidden Waterfalls of Iceland</h3>
           <p style="color: var(--text-light); margin-bottom: 15px;">Skip the tourist traps and explore these secret, stunning waterfalls nestled deep in Iceland's wilderness.</p>

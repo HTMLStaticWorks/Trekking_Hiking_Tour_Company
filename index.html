@@ -245,6 +245,13 @@
       box-shadow: var(--shadow-sm);
     }
     
+    @media screen and (max-width: 992px) {
+      .treks-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 30px;
+      }
+    }
+    
     @media (max-width: 768px) {
       .hero {
         height: auto;
@@ -288,11 +295,16 @@
         <a href="gallery.html" class="nav-link">Gallery</a>
         <a href="contact.html" class="nav-link">Contact</a>
         <a href="signup.html" class="nav-link">Sign Up</a>
+        <a href="login.html" class="nav-link">Log In</a>
+        <div class="mobile-nav-controls">
+          <button class="icon-btn theme-toggle-btn" title="Toggle Dark/Light Mode" aria-label="Toggle Dark/Light Mode"><i class="fas fa-moon"></i></button>
+          <button class="icon-btn rtl-toggle-btn" title="Toggle RTL" style="font-size: 0.9rem; font-weight: 700; font-family: var(--font-text);" aria-label="Toggle RTL Layout">RTL</button>
+        </div>
       </nav>
       
       <div class="controls">
-        <button class="icon-btn" id="theme-toggle" title="Toggle Dark/Light Mode" aria-label="Toggle Dark/Light Mode"><i class="fas fa-moon"></i></button>
-        <button class="icon-btn" id="rtl-toggle" title="Toggle RTL" style="font-size: 0.9rem; font-weight: 700; font-family: var(--font-text);" aria-label="Toggle RTL Layout">RTL</button>
+        <button class="icon-btn theme-toggle-btn" id="theme-toggle" title="Toggle Dark/Light Mode" aria-label="Toggle Dark/Light Mode"><i class="fas fa-moon"></i></button>
+        <button class="icon-btn rtl-toggle-btn" id="rtl-toggle" title="Toggle RTL" style="font-size: 0.9rem; font-weight: 700; font-family: var(--font-text);" aria-label="Toggle RTL Layout">RTL</button>
         <button class="mobile-toggle" aria-label="Open Mobile Menu"><i class="fas fa-bars"></i></button>
       </div>
     </div>
@@ -510,16 +522,16 @@
       <div class="text-center anim-fade-up">
         <h2 class="section-title">Latest Adventure News</h2>
       </div>
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px;">
-        <div class="anim-fade-right">
-          <img src="images/blog/swiss_alps.png" alt="Blog post thumbnail" style="border-radius: 20px; margin-bottom: 20px; box-shadow: var(--shadow-sm);">
+      <div class="blog-grid">
+        <div class="blog-card anim-fade-right">
+          <img src="images/blog/swiss_alps.png" alt="Blog post thumbnail">
           <span style="color: var(--accent-color); font-weight: 600; font-size: 0.9rem;">June 15, 2026</span>
           <h3 style="margin: 10px 0;">Conquering the Swiss Alps: A Guide</h3>
           <p style="color: var(--text-light); margin-bottom: 15px;">An in-depth look at what it takes to navigate the treacherous but beautiful Swiss Alps during peak season.</p>
           <a href="#" style="color: var(--primary-color); font-weight: 600;">Read More <i class="fas fa-arrow-right"></i></a>
         </div>
-        <div class="anim-fade-left">
-          <img src="images/blog/asia_trails.png" alt="Blog post thumbnail" style="border-radius: 20px; margin-bottom: 20px; box-shadow: var(--shadow-sm);">
+        <div class="blog-card anim-fade-left">
+          <img src="images/blog/asia_trails.png" alt="Blog post thumbnail">
           <span style="color: var(--accent-color); font-weight: 600; font-size: 0.9rem;">May 28, 2026</span>
           <h3 style="margin: 10px 0;">Top 5 Unexplored Trails In Asia</h3>
           <p style="color: var(--text-light); margin-bottom: 15px;">Escape the crowds and discover these hidden gems that offer pristine nature and authentic cultural encounters.</p>

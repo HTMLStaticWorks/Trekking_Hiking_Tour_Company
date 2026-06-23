@@ -89,31 +89,14 @@
   </style>
 </head>
 <body>
-  <header class="header sticky" style="background-color: var(--header-bg); padding: 15px 0;">
-    <div class="container">
-      <a href="index.html" class="logo" style="color: var(--text-color);">Trek<span>X</span></a>
-      <nav class="nav-menu">
-        <a href="index.html" class="nav-link" style="color: var(--text-color);">Home</a>
-        <a href="home2.html" class="nav-link" style="color: var(--text-color);">Home 2</a>
-        <a href="about.html" class="nav-link" style="color: var(--text-color);">About Us</a>
-        <a href="services.html" class="nav-link" style="color: var(--text-color);">Services</a>
-        <a href="packages.html" class="nav-link" style="color: var(--text-color);">Packages</a>
-        <a href="gallery.html" class="nav-link" style="color: var(--text-color);">Gallery</a>
-        <a href="contact.html" class="nav-link" style="color: var(--text-color);">Contact</a>
-        <a href="signup.html" class="nav-link active" style="color: var(--text-color);">Sign Up</a>
-      </nav>
-      <div class="controls">
-        <button class="icon-btn" id="theme-toggle" style="color: var(--text-color);" aria-label="Toggle Dark/Light Mode"><i class="fas fa-moon"></i></button>
-        <button class="icon-btn" id="rtl-toggle" title="Toggle RTL" style="color: var(--text-color); font-size: 0.9rem; font-weight: 700; font-family: var(--font-text);" aria-label="Toggle RTL Layout">RTL</button>
-        <button class="mobile-toggle" style="color: var(--text-color);" aria-label="Open Mobile Menu"><i class="fas fa-bars"></i></button>
-      </div>
-    </div>
-  </header>
-
   <section class="signup-section">
     <div class="container">
       <div class="signup-box anim-zoom-in">
         <div class="text-center" style="margin-bottom: 30px;">
+          <a href="index.html" style="margin-bottom: 25px; display: inline-flex; flex-direction: column; align-items: center; text-decoration: none;">
+            <img src="images/favicon.svg" alt="TrekX Logo" style="width: 70px; height: 70px; margin-bottom: 10px; border-radius: 16px; box-shadow: var(--shadow-sm);">
+            <div class="logo" style="font-size: 2.2rem; color: var(--text-color); font-weight: 800; font-family: var(--font-secondary); line-height: 1.2; letter-spacing: 1px;">Trek<span style="color: var(--accent-color);">X</span></div>
+          </a>
           <h2 class="section-title" style="margin-bottom: 10px;">Create Account</h2>
           <p>Join the club and start your adventure today.</p>
         </div>
@@ -174,119 +157,6 @@
     </div>
   </section>
 
-  <!-- Travel Tips Section -->
-  <section class="section" style="background: var(--surface-color);">
-    <div class="container">
-      <div class="text-center anim-fade-up">
-        <h2 class="section-title">Membership Perks</h2>
-        <p class="section-subtitle">Unlock exclusive benefits when you create a TrekX account today.</p>
-      </div>
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px;">
-        <div class="premium-card anim-zoom-in">
-          <div class="card-content">
-            <i class="fas fa-tags" style="font-size: 2rem; color: var(--accent-color); margin-bottom: 15px;"></i>
-            <h3>Early Bird Discounts</h3>
-            <p style="color: var(--text-light);">Get 15% off new itineraries before they are released to the public.</p>
-          </div>
-        </div>
-        <div class="premium-card anim-zoom-in" style="transition-delay: 0.2s;">
-          <div class="card-content">
-            <i class="fas fa-gift" style="font-size: 2rem; color: var(--accent-color); margin-bottom: 15px;"></i>
-            <h3>Free Gear Upgrades</h3>
-            <p style="color: var(--text-light);">Members receive complimentary premium tent and sleeping bag rentals.</p>
-          </div>
-        </div>
-        <div class="premium-card anim-zoom-in" style="transition-delay: 0.4s;">
-          <div class="card-content">
-            <i class="fas fa-glass-cheers" style="font-size: 2rem; color: var(--accent-color); margin-bottom: 15px;"></i>
-            <h3>VIP Events</h3>
-            <p style="color: var(--text-light);">Invitations to exclusive community meetups and documentary screenings.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Latest Blog Section -->
-  <section class="section">
-    <div class="container">
-      <div class="text-center anim-fade-up">
-        <h2 class="section-title">Latest Adventure News</h2>
-      </div>
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px;">
-        <div class="anim-fade-right">
-          <img src="images/blog/club.jpg" alt="Blog post thumbnail" style="border-radius: 20px; margin-bottom: 20px; box-shadow: var(--shadow-sm);">
-          <span style="color: var(--accent-color); font-weight: 600; font-size: 0.9rem;">January 10, 2027</span>
-          <h3 style="margin: 10px 0;">The Benefits of Joining Our Adventure Club</h3>
-          <p style="color: var(--text-light); margin-bottom: 15px;">From exclusive discounts to VIP events, find out why you should become a TrekX member today.</p>
-          <a href="#" style="color: var(--primary-color); font-weight: 600;">Read More <i class="fas fa-arrow-right"></i></a>
-        </div>
-        <div class="anim-fade-left">
-          <img src="images/blog/kilimanjaro.jpg" alt="Blog post thumbnail" style="border-radius: 20px; margin-bottom: 20px; box-shadow: var(--shadow-sm);">
-          <span style="color: var(--accent-color); font-weight: 600; font-size: 0.9rem;">December 20, 2026</span>
-          <h3 style="margin: 10px 0;">Member Spotlight: Conquering Kilimanjaro</h3>
-          <p style="color: var(--text-light); margin-bottom: 15px;">Read an inspiring interview with one of our members who recently reached the summit of Kilimanjaro.</p>
-          <a href="#" style="color: var(--primary-color); font-weight: 600;">Read More <i class="fas fa-arrow-right"></i></a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-col">
-          <a href="index.html" class="logo" style="margin-bottom: 20px; display: block;">Trek<span>X</span></a>
-          <p>We are the leading premium trekking and hiking tour company, dedicated to providing safe, thrilling, and luxurious outdoor adventures worldwide.</p>
-          <div class="social-links">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-youtube"></i></a>
-          </div>
-        </div>
-        
-        <div class="footer-col">
-          <h4>Quick Links</h4>
-          <ul class="footer-links">
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="services.html">Our Services</a></li>
-            <li><a href="packages.html">Trek Packages</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
-          </ul>
-        </div>
-        
-        <div class="footer-col">
-          <h4>Adventures</h4>
-          <ul class="footer-links">
-            <li><a href="#">Mountain Trekking</a></li>
-            <li><a href="#">Forest Trails</a></li>
-            <li><a href="#">Snow Expeditions</a></li>
-            <li><a href="#">Camping</a></li>
-          </ul>
-        </div>
-        
-        <div class="footer-col">
-          <h4>Contact Info</h4>
-          <ul class="footer-links">
-            <li><i class="fas fa-map-marker-alt"></i> 123 Adventure Ave, NY 10001</li>
-            <li><i class="fas fa-phone-alt"></i> +1 (555) 123-4567</li>
-            <li><i class="fas fa-envelope"></i> info@trekX.com</li>
-          </ul>
-        </div>
-      </div>
-      
-      <div class="bottom-footer">
-        <p>&copy; 2026 Trekking & Hiking Tour Company. All Rights Reserved.</p>
-        <div class="bottom-links">
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms & Conditions</a>
-        </div>
-      </div>
-    </div>
-  </footer>
-
   <script src="js/main.js"></script>
   <script src="js/animations.js"></script>
   <script>
@@ -333,7 +203,9 @@
         signupOnlyFields.forEach(field => {
           field.style.display = 'block';
           const input = field.querySelector('input, select');
-          if (input) input.setAttribute('required', '');
+          if (input) {
+            input.setAttribute('required', '');
+          }
         });
         submitBtn.textContent = 'Register Now';
         toggleText.textContent = 'Already have an account?';
