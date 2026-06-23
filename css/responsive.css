@@ -23,7 +23,7 @@
     background-color: var(--bg-color);
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     padding: 40px;
     transition: left var(--transition-smooth), right var(--transition-smooth);
     box-shadow: var(--shadow-lg);
@@ -33,7 +33,7 @@
   [dir="rtl"] .nav-menu {
     left: auto;
     right: -100%;
-    align-items: flex-end;
+    align-items: center;
     flex-direction: column;
   }
 
@@ -50,6 +50,8 @@
     color: var(--text-color);
     font-size: 1.2rem;
     margin-bottom: 10px;
+    text-align: center;
+    width: 100%;
   }
 
   .header {
@@ -70,6 +72,7 @@
 
   .mobile-nav-controls {
     display: flex;
+    justify-content: center;
     align-items: center;
     gap: 15px;
     margin-top: 25px;
@@ -93,7 +96,7 @@
   }
 
   [dir="rtl"] .mobile-nav-controls {
-    justify-content: flex-end;
+    justify-content: center;
   }
 
   .header .controls .theme-toggle-btn,
