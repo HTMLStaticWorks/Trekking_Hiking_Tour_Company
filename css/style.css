@@ -255,11 +255,18 @@ img {
 }
 
 .logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   font-family: var(--font-secondary);
   font-size: 1.8rem;
   font-weight: 800;
   color: #FFF;
   letter-spacing: 1px;
+}
+.brand-icon {
+  height: 32px;
+  width: auto;
 }
 .logo span {
   color: var(--accent-color);
