@@ -1,25 +1,38 @@
 import os
 import glob
 
-def update_logos():
-    html_files = glob.glob('*.html')
-    for file in html_files:
-        with open(file, 'r', encoding='utf-8') as f:
-            content = f.read()
+html_files = glob.glob('d:/projects/Trekking & Hiking Tour Company web/*.html')
 
-        # Define replacements
-        # Normal logo in header
-        content = content.replace('>Trek<span>X</span></a>', '><img src="images/favicon.svg" alt="TrekX Logo" class="brand-icon">Trek<span>X</span></a>')
-        
-        # Logo in div (login/signup)
-        content = content.replace('>Trek<span style="color: var(--accent-color);">X</span></div>', '><img src="images/favicon.svg" alt="TrekX Logo" class="brand-icon">Trek<span style="color: var(--accent-color);">X</span></div>')
+for file_path in html_files:
+    with open(file_path, 'r', encoding='utf-8') as f:
+        content = f.read()
+    
+    # Update footer logo
+    new_content = content.replace(
+        'class="logo" style="margin-bottom: 20px; display: block;"',
+        'class="logo" style="margin-bottom: 20px; display: inline-flex;"'
+    )
+    
+    # For login and signup, I already removed the image, so I don't need to do anything there unless it has display: block. They don't.
+    
+    if new_content != content:
+        with open(file_path, 'w', encoding='utf-8') as f:
+            f.write(new_content)
+        print(f"Updated {file_path}")
 
-        # Since the replace might match already replaced content if we run it twice, we should be careful,
-        # but since we're only running it once, it's fine.
+# Update responsive.css
+css_path = 'd:/projects/Trekking & Hiking Tour Company web/css/responsive.css'
+with open(css_path, 'r', encoding='utf-8') as f:
+    css_content = f.read()
 
-        with open(file, 'w', encoding='utf-8') as f:
-            f.write(content)
+new_css_content = css_content.replace(
+    '  .header .logo {\n    font-size: 1.5rem;\n    line-height: 1.2;\n    display: inline-block;\n  }',
+    '  .header .logo {\n    font-size: 1.5rem;\n    line-height: 1.2;\n    display: inline-flex;\n  }'
+)
 
-if __name__ == '__main__':
-    update_logos()
-    print("Logos updated in HTML files.")
+if new_css_content != css_content:
+    with open(css_path, 'w', encoding='utf-8') as f:
+        f.write(new_css_content)
+    print(f"Updated {css_path}")
+
+print("Done")
