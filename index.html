@@ -245,6 +245,13 @@
       box-shadow: var(--shadow-sm);
     }
     
+    @media screen and (max-width: 992px) {
+      .treks-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 30px;
+      }
+    }
+    
     @media (max-width: 768px) {
       .hero {
         height: auto;
@@ -277,22 +284,26 @@
   <!-- Header -->
   <header class="header">
     <div class="container">
-      <a href="index.html" class="logo">Trek<span>X</span></a>
+      <a href="index.html" class="logo"><img src="images/favicon.svg" alt="TrekX Logo" class="brand-icon">Trek<span>X</span></a>
       
       <nav class="nav-menu">
         <a href="index.html" class="nav-link active">Home</a>
         <a href="home2.html" class="nav-link">Home 2</a>
         <a href="about.html" class="nav-link">About Us</a>
-        <a href="services.html" class="nav-link">Services</a>
+        <a href="services.html" class="nav-link">Expeditions</a>
         <a href="packages.html" class="nav-link">Packages</a>
         <a href="gallery.html" class="nav-link">Gallery</a>
         <a href="contact.html" class="nav-link">Contact</a>
-        <a href="signup.html" class="nav-link">Sign Up</a>
+        <a href="signup.html" class="btn btn-primary">Sign Up</a>
+        <div class="mobile-nav-controls">
+          <button class="icon-btn theme-toggle-btn" title="Toggle Dark/Light Mode" aria-label="Toggle Dark/Light Mode"><i class="fas fa-moon"></i></button>
+          <button class="icon-btn rtl-toggle-btn" title="Toggle RTL" style="font-size: 0.9rem; font-weight: 700; font-family: var(--font-text);" aria-label="Toggle RTL Layout">RTL</button>
+        </div>
       </nav>
       
       <div class="controls">
-        <button class="icon-btn" id="theme-toggle" title="Toggle Dark/Light Mode" aria-label="Toggle Dark/Light Mode"><i class="fas fa-moon"></i></button>
-        <button class="icon-btn" id="rtl-toggle" title="Toggle RTL" style="font-size: 0.9rem; font-weight: 700; font-family: var(--font-text);" aria-label="Toggle RTL Layout">RTL</button>
+        <button class="icon-btn theme-toggle-btn" id="theme-toggle" title="Toggle Dark/Light Mode" aria-label="Toggle Dark/Light Mode"><i class="fas fa-moon"></i></button>
+        <button class="icon-btn rtl-toggle-btn" id="rtl-toggle" title="Toggle RTL" style="font-size: 0.9rem; font-weight: 700; font-family: var(--font-text);" aria-label="Toggle RTL Layout">RTL</button>
         <button class="mobile-toggle" aria-label="Open Mobile Menu"><i class="fas fa-bars"></i></button>
       </div>
     </div>
@@ -323,10 +334,64 @@
     </div>
   </section>
 
+
+  <!-- The Art of Trekking -->
+  <section class="section">
+    <div class="container">
+      <div style="display: flex; flex-wrap: wrap; gap: 40px; align-items: center;">
+        <div style="flex: 1; min-width: 300px; max-width: 550px;" class="anim-fade-right">
+          <img src="images/hero/hero-2.png" alt="The Art of Trekking"
+            style="border-radius: 20px; box-shadow: var(--shadow-lg); width: 100%; max-height: 400px; object-fit: cover;">
+        </div>
+        <div style="flex: 1; min-width: 300px;" class="anim-fade-left">
+          <h2 class="section-title">The Art of Trekking</h2>
+          <p style="margin-bottom: 20px; color: var(--text-light);">Trekking is more than just walking; it's a profound journey of self-discovery, resilience, and connection with nature. Away from the hustle and bustle of city life, the trails offer a unique opportunity to recharge both mentally and physically.</p>
+          <p style="color: var(--text-light); margin-bottom: 30px;">Whether you're traversing a lush forest or conquering a high-altitude peak, every step builds endurance and rewards you with breathtaking panoramas that few get to witness.</p>
+          <a href="about.html" class="btn btn-secondary">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trekking Difficulty Levels -->
+  <section class="section" style="background: var(--surface-color);">
+    <div class="container">
+      <div class="text-center anim-fade-up">
+        <h2 class="section-title">Trekking Difficulty Levels</h2>
+        <p class="section-subtitle">Find the perfect trail that matches your experience and fitness level.</p>
+      </div>
+      
+      <div class="features-grid">
+        <!-- Beginner -->
+        <div class="feature-item anim-fade-up">
+          <i class="fas fa-hiking" style="font-size: 3rem; color: var(--accent-color); margin-bottom: 20px;"></i>
+          <h3>Beginner</h3>
+          <p style="color: var(--text-light); margin-bottom: 15px;">Ideal for newcomers. Features scenic walks on well-paved trails, typically requiring 2-4 hours of walking per day.</p>
+          <span style="font-size: 0.9rem; font-weight: 600; color: var(--primary-color);">Minimal Experience Required</span>
+        </div>
+        <!-- Intermediate -->
+        <div class="feature-item anim-fade-up" style="transition-delay: 0.2s">
+          <i class="fas fa-mountain" style="font-size: 3rem; color: var(--accent-color); margin-bottom: 20px;"></i>
+          <h3>Intermediate</h3>
+          <p style="color: var(--text-light); margin-bottom: 15px;">For the active adventurer. Expect uneven terrain, moderate altitude, and 4-7 hours of hiking daily.</p>
+          <span style="font-size: 0.9rem; font-weight: 600; color: var(--primary-color);">Good Fitness Required</span>
+        </div>
+        <!-- Advanced -->
+        <div class="feature-item anim-fade-up" style="transition-delay: 0.4s">
+          <i class="fas fa-mountain-sun" style="font-size: 3rem; color: var(--accent-color); margin-bottom: 20px;"></i>
+          <h3>Advanced</h3>
+          <p style="color: var(--text-light); margin-bottom: 15px;">For experienced trekkers. High altitudes, steep ascents, and multi-day endurance challenges.</p>
+          <span style="font-size: 0.9rem; font-weight: 600; color: var(--primary-color);">Excellent Fitness Required</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Why Choose Us -->
   <section class="section">
     <div class="container">
       <div class="text-center anim-fade-up">
+        <img src="images/features/why-choose-us-banner.png" alt="Why Choose Us" style="width: 100%; max-height: 400px; object-fit: cover; border-radius: 20px; margin-bottom: 30px; box-shadow: var(--shadow-premium);">
         <h2 class="section-title">Why Choose Us</h2>
         <p class="section-subtitle">We provide world-class experiences with a focus on safety, professional guidance, and unforgettable moments.</p>
       </div>
@@ -510,16 +575,16 @@
       <div class="text-center anim-fade-up">
         <h2 class="section-title">Latest Adventure News</h2>
       </div>
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px;">
-        <div class="anim-fade-right">
-          <img src="images/blog/swiss_alps.png" alt="Blog post thumbnail" style="border-radius: 20px; margin-bottom: 20px; box-shadow: var(--shadow-sm);">
+      <div class="blog-grid">
+        <div class="blog-card anim-fade-right">
+          <img src="images/blog/swiss_alps.png" alt="Blog post thumbnail">
           <span style="color: var(--accent-color); font-weight: 600; font-size: 0.9rem;">June 15, 2026</span>
           <h3 style="margin: 10px 0;">Conquering the Swiss Alps: A Guide</h3>
           <p style="color: var(--text-light); margin-bottom: 15px;">An in-depth look at what it takes to navigate the treacherous but beautiful Swiss Alps during peak season.</p>
           <a href="#" style="color: var(--primary-color); font-weight: 600;">Read More <i class="fas fa-arrow-right"></i></a>
         </div>
-        <div class="anim-fade-left">
-          <img src="images/blog/asia_trails.png" alt="Blog post thumbnail" style="border-radius: 20px; margin-bottom: 20px; box-shadow: var(--shadow-sm);">
+        <div class="blog-card anim-fade-left">
+          <img src="images/blog/asia_trails.png" alt="Blog post thumbnail">
           <span style="color: var(--accent-color); font-weight: 600; font-size: 0.9rem;">May 28, 2026</span>
           <h3 style="margin: 10px 0;">Top 5 Unexplored Trails In Asia</h3>
           <p style="color: var(--text-light); margin-bottom: 15px;">Escape the crowds and discover these hidden gems that offer pristine nature and authentic cultural encounters.</p>
@@ -534,7 +599,7 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-col">
-          <a href="index.html" class="logo" style="margin-bottom: 20px; display: block;">Trek<span>X</span></a>
+          <a href="index.html" class="logo" style="margin-bottom: 20px; display: inline-flex;"><img src="images/favicon.svg" alt="TrekX Logo" class="brand-icon">Trek<span>X</span></a>
           <p>We are the leading premium trekking and hiking tour company, dedicated to providing safe, thrilling, and luxurious outdoor adventures worldwide.</p>
           <div class="social-links">
             <a href="#"><i class="fab fa-facebook-f"></i></a>

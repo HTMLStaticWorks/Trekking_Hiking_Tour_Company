@@ -95,20 +95,24 @@
 <body>
   <header class="header sticky" style="background-color: var(--header-bg); padding: 15px 0;">
     <div class="container">
-      <a href="index.html" class="logo" style="color: var(--text-color);">Trek<span>X</span></a>
+      <a href="index.html" class="logo" style="color: var(--text-color);"><img src="images/favicon.svg" alt="TrekX Logo" class="brand-icon">Trek<span>X</span></a>
       <nav class="nav-menu">
         <a href="index.html" class="nav-link" style="color: var(--text-color);">Home</a>
         <a href="home2.html" class="nav-link" style="color: var(--text-color);">Home 2</a>
         <a href="about.html" class="nav-link" style="color: var(--text-color);">About Us</a>
-        <a href="services.html" class="nav-link" style="color: var(--text-color);">Services</a>
+        <a href="services.html" class="nav-link" style="color: var(--text-color);">Expeditions</a>
         <a href="packages.html" class="nav-link" style="color: var(--text-color);">Packages</a>
         <a href="gallery.html" class="nav-link active" style="color: var(--text-color);">Gallery</a>
         <a href="contact.html" class="nav-link" style="color: var(--text-color);">Contact</a>
-        <a href="signup.html" class="nav-link" style="color: var(--text-color);">Sign Up</a>
+        <a href="signup.html" class="btn btn-primary">Sign Up</a>
+        <div class="mobile-nav-controls">
+          <button class="icon-btn theme-toggle-btn" title="Toggle Dark/Light Mode" aria-label="Toggle Dark/Light Mode"><i class="fas fa-moon"></i></button>
+          <button class="icon-btn rtl-toggle-btn" title="Toggle RTL" style="font-size: 0.9rem; font-weight: 700; font-family: var(--font-text);" aria-label="Toggle RTL Layout">RTL</button>
+        </div>
       </nav>
       <div class="controls">
-        <button class="icon-btn" id="theme-toggle" style="color: var(--text-color);" aria-label="Toggle Dark/Light Mode"><i class="fas fa-moon"></i></button>
-        <button class="icon-btn" id="rtl-toggle" title="Toggle RTL" style="color: var(--text-color); font-size: 0.9rem; font-weight: 700; font-family: var(--font-text);" aria-label="Toggle RTL Layout">RTL</button>
+        <button class="icon-btn theme-toggle-btn" id="theme-toggle" style="color: var(--text-color);" aria-label="Toggle Dark/Light Mode"><i class="fas fa-moon"></i></button>
+        <button class="icon-btn rtl-toggle-btn" id="rtl-toggle" title="Toggle RTL" style="color: var(--text-color); font-size: 0.9rem; font-weight: 700; font-family: var(--font-text);" aria-label="Toggle RTL Layout">RTL</button>
         <button class="mobile-toggle" style="color: var(--text-color);" aria-label="Open Mobile Menu"><i class="fas fa-bars"></i></button>
       </div>
     </div>
@@ -187,25 +191,18 @@
   </section>
 
   <!-- Latest Blog Section -->
-  <section class="section">
+    <section class="section">
     <div class="container">
       <div class="text-center anim-fade-up">
-        <h2 class="section-title">Latest Adventure News</h2>
+        <h2 class="section-title">Photographer of the Month</h2>
+        <p style="color: var(--text-light); max-width: 600px; margin: 0 auto 40px;">Celebrating the stunning captures from our community of trekkers.</p>
       </div>
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px;">
-        <div class="anim-fade-right">
-          <img src="images/blog/photography.jpg" alt="Blog post thumbnail" style="border-radius: 20px; margin-bottom: 20px; box-shadow: var(--shadow-sm);">
-          <span style="color: var(--accent-color); font-weight: 600; font-size: 0.9rem;">November 05, 2026</span>
-          <h3 style="margin: 10px 0;">Tips for Stunning Landscape Photography</h3>
-          <p style="color: var(--text-light); margin-bottom: 15px;">Learn how to capture the grandeur of the mountains with our expert photography guide.</p>
-          <a href="#" style="color: var(--primary-color); font-weight: 600;">Read More <i class="fas fa-arrow-right"></i></a>
-        </div>
-        <div class="anim-fade-left">
-          <img src="images/blog/camera_gear.jpg" alt="Blog post thumbnail" style="border-radius: 20px; margin-bottom: 20px; box-shadow: var(--shadow-sm);">
-          <span style="color: var(--accent-color); font-weight: 600; font-size: 0.9rem;">October 22, 2026</span>
-          <h3 style="margin: 10px 0;">Top 10 Most Photographed Trails in the World</h3>
-          <p style="color: var(--text-light); margin-bottom: 15px;">These stunning locations offer the perfect backdrop for your next viral adventure post.</p>
-          <a href="#" style="color: var(--primary-color); font-weight: 600;">Read More <i class="fas fa-arrow-right"></i></a>
+      <div class="blog-card anim-fade-up" style="max-width: 800px; margin: 0 auto; display: flex; align-items: center; gap: 20px; padding: 20px;">
+        <img src="images/blog/our_story.jpg" alt="Featured Photo" style="width: 50%; border-radius: 8px;">
+        <div style="width: 50%;">
+          <h3 style="margin-bottom: 10px;">Sunrise at Kilimanjaro</h3>
+          <p style="color: var(--text-light); margin-bottom: 15px;">"The hardest climb I've ever done, but the view made every step worth it."</p>
+          <span style="font-weight: bold;">- Sarah Jenkins, NYC</span>
         </div>
       </div>
     </div>
@@ -216,7 +213,7 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-col">
-          <a href="index.html" class="logo" style="margin-bottom: 20px; display: block;">Trek<span>X</span></a>
+          <a href="index.html" class="logo" style="margin-bottom: 20px; display: inline-flex;"><img src="images/favicon.svg" alt="TrekX Logo" class="brand-icon">Trek<span>X</span></a>
           <p>We are the leading premium trekking and hiking tour company, dedicated to providing safe, thrilling, and luxurious outdoor adventures worldwide.</p>
           <div class="social-links">
             <a href="#"><i class="fab fa-facebook-f"></i></a>

@@ -116,20 +116,24 @@
   <!-- Header placeholder -->
   <header class="header sticky" style="background-color: var(--header-bg); padding: 15px 0;">
     <div class="container">
-      <a href="index.html" class="logo" style="color: var(--text-color);">Trek<span>X</span></a>
+      <a href="index.html" class="logo" style="color: var(--text-color);"><img src="images/favicon.svg" alt="TrekX Logo" class="brand-icon">Trek<span>X</span></a>
       <nav class="nav-menu">
         <a href="index.html" class="nav-link" style="color: var(--text-color);">Home</a>
         <a href="home2.html" class="nav-link" style="color: var(--text-color);">Home 2</a>
         <a href="about.html" class="nav-link" style="color: var(--text-color);">About Us</a>
-        <a href="services.html" class="nav-link active" style="color: var(--text-color);">Services</a>
+        <a href="services.html" class="nav-link active" style="color: var(--text-color);">Expeditions</a>
         <a href="packages.html" class="nav-link" style="color: var(--text-color);">Packages</a>
         <a href="gallery.html" class="nav-link" style="color: var(--text-color);">Gallery</a>
         <a href="contact.html" class="nav-link" style="color: var(--text-color);">Contact</a>
-        <a href="signup.html" class="nav-link" style="color: var(--text-color);">Sign Up</a>
+        <a href="signup.html" class="btn btn-primary">Sign Up</a>
+        <div class="mobile-nav-controls">
+          <button class="icon-btn theme-toggle-btn" title="Toggle Dark/Light Mode" aria-label="Toggle Dark/Light Mode"><i class="fas fa-moon"></i></button>
+          <button class="icon-btn rtl-toggle-btn" title="Toggle RTL" style="font-size: 0.9rem; font-weight: 700; font-family: var(--font-text);" aria-label="Toggle RTL Layout">RTL</button>
+        </div>
       </nav>
       <div class="controls">
-        <button class="icon-btn" id="theme-toggle" style="color: var(--text-color);" aria-label="Toggle Dark/Light Mode"><i class="fas fa-moon"></i></button>
-        <button class="icon-btn" id="rtl-toggle" title="Toggle RTL" style="color: var(--text-color); font-size: 0.9rem; font-weight: 700; font-family: var(--font-text);" aria-label="Toggle RTL Layout">RTL</button>
+        <button class="icon-btn theme-toggle-btn" id="theme-toggle" style="color: var(--text-color);" aria-label="Toggle Dark/Light Mode"><i class="fas fa-moon"></i></button>
+        <button class="icon-btn rtl-toggle-btn" id="rtl-toggle" title="Toggle RTL" style="color: var(--text-color); font-size: 0.9rem; font-weight: 700; font-family: var(--font-text);" aria-label="Toggle RTL Layout">RTL</button>
         <button class="mobile-toggle" style="color: var(--text-color);" aria-label="Open Mobile Menu"><i class="fas fa-bars"></i></button>
       </div>
     </div>
@@ -221,68 +225,71 @@
   </section>
 
   <!-- FAQ Section -->
-  <section class="section" style="background: var(--bg-color); border-top: 1px solid var(--border-color);">
+    <section class="section">
     <div class="container">
       <div class="text-center anim-fade-up">
-        <h2 class="section-title">Frequently Asked Questions</h2>
-        <p class="section-subtitle">Got questions about our services? Find your answers here.</p>
+        <h2 class="section-title">Equipment Rental Services</h2>
+        <p style="color: var(--text-light); max-width: 600px; margin: 0 auto 40px;">Don't want to buy expensive gear? We offer premium equipment rentals for all our expeditions.</p>
       </div>
-      <div class="faq-grid" style="max-width: 800px; margin: 40px auto 0;">
-        <details class="faq-item anim-fade-up">
-          <summary>What is included in the premium trekking package?</summary>
-          <div class="faq-content">
-            <p>Our premium packages include professional certified guides, high-quality gear (tents, sleeping bags, and safety equipment), gourmet meals, permits, local transport, and emergency medical support including oxygen cylinders and satellite phones.</p>
-          </div>
-        </details>
-        <details class="faq-item anim-fade-up" style="transition-delay: 0.1s;">
-          <summary>Do I need previous climbing experience for mountain trekking?</summary>
-          <div class="faq-content">
-            <p>We cater to all skill levels. Our trekking itineraries are marked with difficulty ratings. While beginner trails require no prior experience (just basic physical fitness), advanced high-altitude treks require technical climbing training, which we can provide before the expedition.</p>
-          </div>
-        </details>
-        <details class="faq-item anim-fade-up" style="transition-delay: 0.2s;">
-          <summary>How do you ensure safety on high-altitude expeditions?</summary>
-          <div class="faq-content">
-            <p>Safety is our top priority. We maintain a 1:3 guide-to-client ratio, carry satellite communication gear, monitor vital signs daily for acute mountain sickness (AMS), and have a guaranteed helicopter evacuation plan in place for all high-altitude routes.</p>
-          </div>
-        </details>
-        <details class="faq-item anim-fade-up" style="transition-delay: 0.3s;">
-          <summary>Can we customize our group itinerary?</summary>
-          <div class="faq-content">
-            <p>Yes, absolutely! Through our Custom Travel Planning service, we can tailor the route, duration, accommodation style, and difficulty level to suit the specific needs and goals of your group.</p>
-          </div>
-        </details>
+      <div class="stats-grid">
+        <div class="stat-item anim-fade-up">
+          <i class="fas fa-campground fa-3x" style="color: var(--primary-color); margin-bottom: 15px;"></i>
+          <h3 style="margin-bottom: 10px;">Tents & Sleeping Bags</h3>
+          <p style="color: var(--text-light); font-size: 0.9rem;">Sub-zero rated sleeping bags and 4-season tents.</p>
+        </div>
+        <div class="stat-item anim-fade-up" style="animation-delay: 0.2s;">
+          <i class="fas fa-shoe-prints fa-3x" style="color: var(--primary-color); margin-bottom: 15px;"></i>
+          <h3 style="margin-bottom: 10px;">Boots & Crampons</h3>
+          <p style="color: var(--text-light); font-size: 0.9rem;">Fitted mountaineering boots and ice gear.</p>
+        </div>
+        <div class="stat-item anim-fade-up" style="animation-delay: 0.4s;">
+          <i class="fas fa-mitten fa-3x" style="color: var(--primary-color); margin-bottom: 15px;"></i>
+          <h3 style="margin-bottom: 10px;">Apparel</h3>
+          <p style="color: var(--text-light); font-size: 0.9rem;">Down jackets, waterproof layers, and thermal wear.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Travel Tips Section -->
+  <!-- Expedition Prep Section (New Layout) -->
   <section class="section" style="background: var(--surface-color);">
     <div class="container">
-      <div class="text-center anim-fade-up">
-        <h2 class="section-title">Expedition Prep</h2>
+      <div class="text-center anim-fade-up" style="margin-bottom: 50px;">
+        <h2 class="section-title">Expedition Prep Steps</h2>
         <p class="section-subtitle">Get ready for your guided adventure with our expert checklist.</p>
       </div>
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px;">
-        <div class="premium-card anim-zoom-in">
-          <div class="card-content">
-            <i class="fas fa-dumbbell" style="font-size: 2rem; color: var(--accent-color); margin-bottom: 15px;"></i>
-            <h3>Fitness Training</h3>
-            <p style="color: var(--text-light);">A 12-week workout plan to prepare your body for the elevation.</p>
+      
+      <div style="display: flex; flex-direction: column; gap: 30px;">
+        <!-- Step 1 -->
+        <div class="premium-card anim-fade-up" style="display: flex; flex-wrap: wrap; padding: 0; overflow: hidden; align-items: stretch;">
+          <div style="flex: 1; min-width: 250px; background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); display: flex; align-items: center; justify-content: center; padding: 40px;">
+            <i class="fas fa-dumbbell" style="font-size: 4rem; color: rgba(255,255,255,0.9);"></i>
+          </div>
+          <div style="flex: 2; min-width: 300px; padding: 40px; display: flex; flex-direction: column; justify-content: center;">
+            <h3 style="color: var(--primary-color); font-size: 1.5rem; margin-bottom: 15px;">1. Fitness Training</h3>
+            <p style="color: var(--text-light); line-height: 1.8; margin-bottom: 0;">A 12-week workout plan to prepare your body for the elevation and endurance required. We provide custom routines focusing on cardio, leg strength, and core stability to ensure you enjoy the trek safely.</p>
           </div>
         </div>
-        <div class="premium-card anim-zoom-in" style="transition-delay: 0.2s;">
-          <div class="card-content">
-            <i class="fas fa-campground" style="font-size: 2rem; color: var(--accent-color); margin-bottom: 15px;"></i>
-            <h3>Gear Rentals</h3>
-            <p style="color: var(--text-light);">What to rent from us versus what to buy and bring yourself.</p>
+
+        <!-- Step 2 -->
+        <div class="premium-card anim-fade-up" style="display: flex; flex-wrap: wrap; padding: 0; overflow: hidden; align-items: stretch; flex-direction: row-reverse;">
+          <div style="flex: 1; min-width: 250px; background: var(--accent-color); display: flex; align-items: center; justify-content: center; padding: 40px;">
+            <i class="fas fa-campground" style="font-size: 4rem; color: rgba(255,255,255,0.9);"></i>
+          </div>
+          <div style="flex: 2; min-width: 300px; padding: 40px; display: flex; flex-direction: column; justify-content: center;">
+            <h3 style="color: var(--accent-color); font-size: 1.5rem; margin-bottom: 15px;">2. Gear Rentals</h3>
+            <p style="color: var(--text-light); line-height: 1.8; margin-bottom: 0;">What to rent from us versus what to buy and bring yourself. We offer top-tier sleeping bags, down jackets, and walking poles, saving you luggage space and money.</p>
           </div>
         </div>
-        <div class="premium-card anim-zoom-in" style="transition-delay: 0.4s;">
-          <div class="card-content">
-            <i class="fas fa-file-medical" style="font-size: 2rem; color: var(--accent-color); margin-bottom: 15px;"></i>
-            <h3>Travel Insurance</h3>
-            <p style="color: var(--text-light);">How to pick the right evacuation policy for high-altitude zones.</p>
+
+        <!-- Step 3 -->
+        <div class="premium-card anim-fade-up" style="display: flex; flex-wrap: wrap; padding: 0; overflow: hidden; align-items: stretch;">
+          <div style="flex: 1; min-width: 250px; background: linear-gradient(135deg, var(--secondary-color), var(--primary-color)); display: flex; align-items: center; justify-content: center; padding: 40px;">
+            <i class="fas fa-file-medical" style="font-size: 4rem; color: rgba(255,255,255,0.9);"></i>
+          </div>
+          <div style="flex: 2; min-width: 300px; padding: 40px; display: flex; flex-direction: column; justify-content: center;">
+            <h3 style="color: var(--primary-color); font-size: 1.5rem; margin-bottom: 15px;">3. Travel Insurance</h3>
+            <p style="color: var(--text-light); line-height: 1.8; margin-bottom: 0;">How to pick the right evacuation policy for high-altitude zones. We guide you through selecting plans that explicitly cover helicopter rescues and altitude sickness.</p>
           </div>
         </div>
       </div>
@@ -290,26 +297,14 @@
   </section>
 
   <!-- Latest Blog Section -->
-  <section class="section">
-    <div class="container">
-      <div class="text-center anim-fade-up">
-        <h2 class="section-title">Latest Adventure News</h2>
-      </div>
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px;">
-        <div class="anim-fade-right">
-          <img src="images/blog/guide.jpg" alt="Blog post thumbnail" style="border-radius: 20px; margin-bottom: 20px; box-shadow: var(--shadow-sm);">
-          <span style="color: var(--accent-color); font-weight: 600; font-size: 0.9rem;">August 12, 2026</span>
-          <h3 style="margin: 10px 0;">Why You Need a Professional Guide</h3>
-          <p style="color: var(--text-light); margin-bottom: 15px;">Navigating untamed wilderness can be dangerous. Learn why hiring a professional guide is non-negotiable.</p>
-          <a href="#" style="color: var(--primary-color); font-weight: 600;">Read More <i class="fas fa-arrow-right"></i></a>
-        </div>
-        <div class="anim-fade-left">
-          <img src="images/blog/helicopter.jpg" alt="Blog post thumbnail" style="border-radius: 20px; margin-bottom: 20px; box-shadow: var(--shadow-sm);">
-          <span style="color: var(--accent-color); font-weight: 600; font-size: 0.9rem;">August 01, 2026</span>
-          <h3 style="margin: 10px 0;">Inside Our Helicopter Rescue Training</h3>
-          <p style="color: var(--text-light); margin-bottom: 15px;">A behind-the-scenes look at how our rescue teams prepare for emergency evacuations at high altitudes.</p>
-          <a href="#" style="color: var(--primary-color); font-weight: 600;">Read More <i class="fas fa-arrow-right"></i></a>
-        </div>
+    <section class="section" style="background-color: var(--bg-light);">
+    <div class="container text-center anim-fade-up">
+      <h2 class="section-title">Safety Certifications</h2>
+      <p style="color: var(--text-light); max-width: 600px; margin: 0 auto 40px;">We are proud to be certified by the world's leading mountaineering and outdoor safety organizations.</p>
+      <div style="display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; align-items: center;">
+        <div style="font-weight: bold; font-size: 1.2rem; color: var(--text-color);"><i class="fas fa-certificate" style="color: var(--primary-color); margin-right: 5px;"></i> Global Alpine Safe</div>
+        <div style="font-weight: bold; font-size: 1.2rem; color: var(--text-color);"><i class="fas fa-certificate" style="color: var(--primary-color); margin-right: 5px;"></i> UIAA Certified</div>
+        <div style="font-weight: bold; font-size: 1.2rem; color: var(--text-color);"><i class="fas fa-certificate" style="color: var(--primary-color); margin-right: 5px;"></i> Wilderness First Responder</div>
       </div>
     </div>
   </section>
@@ -319,7 +314,7 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-col">
-          <a href="index.html" class="logo" style="margin-bottom: 20px; display: block;">Trek<span>X</span></a>
+          <a href="index.html" class="logo" style="margin-bottom: 20px; display: inline-flex;"><img src="images/favicon.svg" alt="TrekX Logo" class="brand-icon">Trek<span>X</span></a>
           <p>We are the leading premium trekking and hiking tour company, dedicated to providing safe, thrilling, and luxurious outdoor adventures worldwide.</p>
           <div class="social-links">
             <a href="#"><i class="fab fa-facebook-f"></i></a>

@@ -90,26 +90,43 @@
       color: var(--primary-color);
       margin-top: 10px;
     }
+
+    @media screen and (min-width: 992px) {
+      .package-section .section-subtitle {
+        margin-left: 0;
+        margin-right: auto;
+        text-align: left;
+      }
+      [dir="rtl"] .package-section .section-subtitle {
+        margin-right: 0;
+        margin-left: auto;
+        text-align: right;
+      }
+    }
   </style>
 </head>
 <body>
   <!-- Header placeholder -->
   <header class="header sticky" style="background-color: var(--header-bg); padding: 15px 0;">
     <div class="container">
-      <a href="index.html" class="logo" style="color: var(--text-color);">Trek<span>X</span></a>
+      <a href="index.html" class="logo" style="color: var(--text-color);"><img src="images/favicon.svg" alt="TrekX Logo" class="brand-icon">Trek<span>X</span></a>
       <nav class="nav-menu">
         <a href="index.html" class="nav-link" style="color: var(--text-color);">Home</a>
         <a href="home2.html" class="nav-link" style="color: var(--text-color);">Home 2</a>
         <a href="about.html" class="nav-link" style="color: var(--text-color);">About Us</a>
-        <a href="services.html" class="nav-link" style="color: var(--text-color);">Services</a>
+        <a href="services.html" class="nav-link" style="color: var(--text-color);">Expeditions</a>
         <a href="packages.html" class="nav-link active" style="color: var(--text-color);">Packages</a>
         <a href="gallery.html" class="nav-link" style="color: var(--text-color);">Gallery</a>
         <a href="contact.html" class="nav-link" style="color: var(--text-color);">Contact</a>
-        <a href="signup.html" class="nav-link" style="color: var(--text-color);">Sign Up</a>
+        <a href="signup.html" class="btn btn-primary">Sign Up</a>
+        <div class="mobile-nav-controls">
+          <button class="icon-btn theme-toggle-btn" title="Toggle Dark/Light Mode" aria-label="Toggle Dark/Light Mode"><i class="fas fa-moon"></i></button>
+          <button class="icon-btn rtl-toggle-btn" title="Toggle RTL" style="font-size: 0.9rem; font-weight: 700; font-family: var(--font-text);" aria-label="Toggle RTL Layout">RTL</button>
+        </div>
       </nav>
       <div class="controls">
-        <button class="icon-btn" id="theme-toggle" style="color: var(--text-color);" aria-label="Toggle Dark/Light Mode"><i class="fas fa-moon"></i></button>
-        <button class="icon-btn" id="rtl-toggle" title="Toggle RTL" style="color: var(--text-color); font-size: 0.9rem; font-weight: 700; font-family: var(--font-text);" aria-label="Toggle RTL Layout">RTL</button>
+        <button class="icon-btn theme-toggle-btn" id="theme-toggle" style="color: var(--text-color);" aria-label="Toggle Dark/Light Mode"><i class="fas fa-moon"></i></button>
+        <button class="icon-btn rtl-toggle-btn" id="rtl-toggle" title="Toggle RTL" style="color: var(--text-color); font-size: 0.9rem; font-weight: 700; font-family: var(--font-text);" aria-label="Toggle RTL Layout">RTL</button>
         <button class="mobile-toggle" style="color: var(--text-color);" aria-label="Open Mobile Menu"><i class="fas fa-bars"></i></button>
       </div>
     </div>
@@ -125,21 +142,39 @@
   <!-- Beginner Treks -->
   <section class="section package-section">
     <div class="container">
-      <h2 class="section-title anim-fade-up">Beginner Treks</h2>
-      <p class="section-subtitle anim-fade-up">Perfect for families and those new to hiking.</p>
+      <div class="text-center anim-fade-up">
+        <h2 class="section-title">Beginner Treks</h2>
+        <p class="section-subtitle">Perfect for families and those new to hiking.</p>
+      </div>
       <div class="treks-grid">
         <div class="premium-card anim-zoom-in">
           <div class="card-img-wrapper"><img src="images/treks/blue_lake_trail.png" alt="Beginner Trek"></div>
           <div class="card-content">
             <div class="trek-meta"><span>2 Days</span><span>Easy</span></div>
-            <h3>Blue Lake Trail</h3><p class="trek-price">$299</p>
+            <h3>Blue Lake Trail</h3><div style="display: flex; justify-content: space-between; align-items: center; margin-top: 15px;">
+              <p class="trek-price" style="margin: 0;">$299</p>
+              <a href="contact.html" class="btn btn-primary" style="padding: 8px 20px; font-size: 0.9rem; border-radius: 30px;">Book Now</a>
+            </div>
           </div>
         </div>
         <div class="premium-card anim-zoom-in" style="transition-delay: 0.2s">
           <div class="card-img-wrapper"><img src="images/treks/meadow_valley.png" alt="Beginner Trek"></div>
           <div class="card-content">
             <div class="trek-meta"><span>3 Days</span><span>Easy</span></div>
-            <h3>Meadow Valley Camp</h3><p class="trek-price">$399</p>
+            <h3>Meadow Valley Camp</h3><div style="display: flex; justify-content: space-between; align-items: center; margin-top: 15px;">
+              <p class="trek-price" style="margin: 0;">$399</p>
+              <a href="contact.html" class="btn btn-primary" style="padding: 8px 20px; font-size: 0.9rem; border-radius: 30px;">Book Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="premium-card anim-zoom-in" style="transition-delay: 0.4s">
+          <div class="card-img-wrapper"><img src="images/treks/amazon.png" alt="Beginner Trek"></div>
+          <div class="card-content">
+            <div class="trek-meta"><span>3 Days</span><span>Easy</span></div>
+            <h3>Amazon Rainforest Trail</h3><div style="display: flex; justify-content: space-between; align-items: center; margin-top: 15px;">
+              <p class="trek-price" style="margin: 0;">$599</p>
+              <a href="contact.html" class="btn btn-primary" style="padding: 8px 20px; font-size: 0.9rem; border-radius: 30px;">Book Now</a>
+            </div>
           </div>
         </div>
       </div>
@@ -149,20 +184,38 @@
   <!-- Intermediate Treks -->
   <section class="section package-section" style="background: var(--surface-color);">
     <div class="container">
-      <h2 class="section-title anim-fade-up">Intermediate Treks</h2>
+      <div class="text-center anim-fade-up">
+        <h2 class="section-title">Intermediate Treks</h2>
+      </div>
       <div class="treks-grid">
         <div class="premium-card anim-zoom-in">
           <div class="card-img-wrapper"><img src="images/treks/rocky.png" alt="Inter Trek"></div>
           <div class="card-content">
             <div class="trek-meta"><span>5 Days</span><span>Moderate</span></div>
-            <h3>Highland Pass</h3><p class="trek-price">$699</p>
+            <h3>Highland Pass</h3><div style="display: flex; justify-content: space-between; align-items: center; margin-top: 15px;">
+              <p class="trek-price" style="margin: 0;">$699</p>
+              <a href="contact.html" class="btn btn-primary" style="padding: 8px 20px; font-size: 0.9rem; border-radius: 30px;">Book Now</a>
+            </div>
           </div>
         </div>
         <div class="premium-card anim-zoom-in" style="transition-delay: 0.2s">
           <div class="card-img-wrapper"><img src="images/blog/swiss_alps.png" alt="Inter Trek"></div>
           <div class="card-content">
             <div class="trek-meta"><span>6 Days</span><span>Moderate</span></div>
-            <h3>Glacier View Trek</h3><p class="trek-price">$899</p>
+            <h3>Glacier View Trek</h3><div style="display: flex; justify-content: space-between; align-items: center; margin-top: 15px;">
+              <p class="trek-price" style="margin: 0;">$899</p>
+              <a href="contact.html" class="btn btn-primary" style="padding: 8px 20px; font-size: 0.9rem; border-radius: 30px;">Book Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="premium-card anim-zoom-in" style="transition-delay: 0.4s">
+          <div class="card-img-wrapper"><img src="images/treks/fjordlands_explorer.png" alt="Inter Trek"></div>
+          <div class="card-content">
+            <div class="trek-meta"><span>4 Days</span><span>Moderate</span></div>
+            <h3>Fjordlands Explorer</h3><div style="display: flex; justify-content: space-between; align-items: center; margin-top: 15px;">
+              <p class="trek-price" style="margin: 0;">$549</p>
+              <a href="contact.html" class="btn btn-primary" style="padding: 8px 20px; font-size: 0.9rem; border-radius: 30px;">Book Now</a>
+            </div>
           </div>
         </div>
       </div>
@@ -172,20 +225,38 @@
   <!-- Advanced Treks -->
   <section class="section package-section">
     <div class="container">
-      <h2 class="section-title anim-fade-up">Advanced Treks</h2>
+      <div class="text-center anim-fade-up">
+        <h2 class="section-title">Advanced Treks</h2>
+      </div>
       <div class="treks-grid">
         <div class="premium-card anim-zoom-in">
           <div class="card-img-wrapper"><img src="images/treks/everest.png" alt="Adv Trek"></div>
           <div class="card-content">
             <div class="trek-meta"><span>14 Days</span><span>Difficult</span></div>
-            <h3>Everest Base Camp</h3><p class="trek-price">$1,499</p>
+            <h3>Everest Base Camp</h3><div style="display: flex; justify-content: space-between; align-items: center; margin-top: 15px;">
+              <p class="trek-price" style="margin: 0;">$1,499</p>
+              <a href="contact.html" class="btn btn-primary" style="padding: 8px 20px; font-size: 0.9rem; border-radius: 30px;">Book Now</a>
+            </div>
           </div>
         </div>
         <div class="premium-card anim-zoom-in" style="transition-delay: 0.2s">
           <div class="card-img-wrapper"><img src="images/blog/kilimanjaro.jpg" alt="Adv Trek"></div>
           <div class="card-content">
             <div class="trek-meta"><span>8 Days</span><span>Difficult</span></div>
-            <h3>Kilimanjaro Summit</h3><p class="trek-price">$1,899</p>
+            <h3>Kilimanjaro Summit</h3><div style="display: flex; justify-content: space-between; align-items: center; margin-top: 15px;">
+              <p class="trek-price" style="margin: 0;">$1,899</p>
+              <a href="contact.html" class="btn btn-primary" style="padding: 8px 20px; font-size: 0.9rem; border-radius: 30px;">Book Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="premium-card anim-zoom-in" style="transition-delay: 0.4s">
+          <div class="card-img-wrapper"><img src="images/treks/patagonia_wilderness.png" alt="Adv Trek"></div>
+          <div class="card-content">
+            <div class="trek-meta"><span>12 Days</span><span>Difficult</span></div>
+            <h3>Patagonia Wilderness</h3><div style="display: flex; justify-content: space-between; align-items: center; margin-top: 15px;">
+              <p class="trek-price" style="margin: 0;">$1,299</p>
+              <a href="contact.html" class="btn btn-primary" style="padding: 8px 20px; font-size: 0.9rem; border-radius: 30px;">Book Now</a>
+            </div>
           </div>
         </div>
       </div>
@@ -283,27 +354,11 @@
   </section>
 
   <!-- Latest Blog Section -->
-  <section class="section">
-    <div class="container">
-      <div class="text-center anim-fade-up">
-        <h2 class="section-title">Latest Adventure News</h2>
-      </div>
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px;">
-        <div class="anim-fade-right">
-          <img src="images/blog/treks.jpg" alt="Blog post thumbnail" style="border-radius: 20px; margin-bottom: 20px; box-shadow: var(--shadow-sm);">
-          <span style="color: var(--accent-color); font-weight: 600; font-size: 0.9rem;">September 04, 2026</span>
-          <h3 style="margin: 10px 0;">3-Day vs 7-Day Treks: Which is Right For You?</h3>
-          <p style="color: var(--text-light); margin-bottom: 15px;">Deciding on trip length can be tricky. We break down the pros and cons of short versus long expeditions.</p>
-          <a href="#" style="color: var(--primary-color); font-weight: 600;">Read More <i class="fas fa-arrow-right"></i></a>
-        </div>
-        <div class="anim-fade-left">
-          <img src="images/blog/budget.jpg" alt="Blog post thumbnail" style="border-radius: 20px; margin-bottom: 20px; box-shadow: var(--shadow-sm);">
-          <span style="color: var(--accent-color); font-weight: 600; font-size: 0.9rem;">August 25, 2026</span>
-          <h3 style="margin: 10px 0;">How to Budget for an International Expedition</h3>
-          <p style="color: var(--text-light); margin-bottom: 15px;">From permits to flights, here is everything you need to factor into your adventure budget.</p>
-          <a href="#" style="color: var(--primary-color); font-weight: 600;">Read More <i class="fas fa-arrow-right"></i></a>
-        </div>
-      </div>
+    <section class="section" style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('images/hero.jpg') center/cover; color: white;">
+    <div class="container text-center anim-fade-up">
+      <h2 style="font-size: 2.5rem; margin-bottom: 20px;">Custom Group Packages</h2>
+      <p style="font-size: 1.1rem; max-width: 700px; margin: 0 auto 40px; color: #ddd;">Planning a corporate retreat, family reunion, or a large friends getaway? We create bespoke itineraries tailored to your group's size, experience level, and goals.</p>
+      <a href="contact.html" class="btn btn-primary">Request a Custom Quote</a>
     </div>
   </section>
 
@@ -312,7 +367,7 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-col">
-          <a href="index.html" class="logo" style="margin-bottom: 20px; display: block;">Trek<span>X</span></a>
+          <a href="index.html" class="logo" style="margin-bottom: 20px; display: inline-flex;"><img src="images/favicon.svg" alt="TrekX Logo" class="brand-icon">Trek<span>X</span></a>
           <p>We are the leading premium trekking and hiking tour company, dedicated to providing safe, thrilling, and luxurious outdoor adventures worldwide.</p>
           <div class="social-links">
             <a href="#"><i class="fab fa-facebook-f"></i></a>

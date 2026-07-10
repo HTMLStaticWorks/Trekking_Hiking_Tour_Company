@@ -40,32 +40,36 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* --- Theme Toggle (Dark/Light) --- */
-  const themeToggle = document.getElementById('theme-toggle');
+  const themeToggles = document.querySelectorAll('.theme-toggle-btn');
   const body = document.body;
   const currentTheme = localStorage.getItem('theme');
 
   if (currentTheme) {
     body.classList.add(currentTheme);
-    if (themeToggle && currentTheme === 'dark-mode') {
-      themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+    if (currentTheme === 'dark-mode') {
+      themeToggles.forEach(btn => {
+        btn.innerHTML = '<i class="fas fa-sun"></i>';
+      });
     }
   }
 
-  if (themeToggle) {
-    themeToggle.addEventListener('click', () => {
+  themeToggles.forEach(btn => {
+    btn.addEventListener('click', () => {
       body.classList.toggle('dark-mode');
       
       let theme = 'light';
-      if (body.classList.contains('dark-mode')) {
+      const isDark = body.classList.contains('dark-mode');
+      if (isDark) {
         theme = 'dark-mode';
-        themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
-      } else {
-        themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
       }
+      
+      themeToggles.forEach(toggle => {
+        toggle.innerHTML = isDark ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+      });
       
       localStorage.setItem('theme', theme);
     });
-  }
+  });
 
   /* --- FAQ Accordion --- */
   const faqItems = document.querySelectorAll('.faq-item');
@@ -82,32 +86,34 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   /* --- RTL Toggle --- */
-  const rtlToggle = document.getElementById('rtl-toggle');
+  const rtlToggles = document.querySelectorAll('.rtl-toggle-btn');
   const htmlEl = document.documentElement;
   const currentDir = localStorage.getItem('direction');
 
   if (currentDir === 'rtl') {
     htmlEl.setAttribute('dir', 'rtl');
-    if (rtlToggle) rtlToggle.innerText = 'LTR';
+    rtlToggles.forEach(btn => {
+      btn.innerText = 'LTR';
+    });
   } else {
     htmlEl.setAttribute('dir', 'ltr');
-    if (rtlToggle) rtlToggle.innerText = 'RTL';
-  }
-
-  if (rtlToggle) {
-    rtlToggle.addEventListener('click', () => {
-      const dir = htmlEl.getAttribute('dir');
-      if (dir === 'ltr' || !dir) {
-        htmlEl.setAttribute('dir', 'rtl');
-        localStorage.setItem('direction', 'rtl');
-        rtlToggle.innerText = 'LTR';
-      } else {
-        htmlEl.setAttribute('dir', 'ltr');
-        localStorage.setItem('direction', 'ltr');
-        rtlToggle.innerText = 'RTL';
-      }
+    rtlToggles.forEach(btn => {
+      btn.innerText = 'RTL';
     });
   }
+
+  rtlToggles.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const dir = htmlEl.getAttribute('dir');
+      const targetDir = (dir === 'ltr' || !dir) ? 'rtl' : 'ltr';
+      htmlEl.setAttribute('dir', targetDir);
+      localStorage.setItem('direction', targetDir);
+      
+      rtlToggles.forEach(toggle => {
+        toggle.innerText = targetDir === 'rtl' ? 'LTR' : 'RTL';
+      });
+    });
+  });
 
   /* --- Back To Top Button --- */
   const backToTop = document.getElementById('back-to-top');
