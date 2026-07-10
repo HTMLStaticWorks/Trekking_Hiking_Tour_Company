@@ -145,9 +145,41 @@
         left: 21px;
       }
 
-      .right {
+      .timeline-item.right {
         left: 0;
       }
+    }
+    
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+
+    .stat-item {
+      background: #FFFFFF;
+      padding: 40px 20px;
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+      transition: transform var(--transition-smooth), box-shadow var(--transition-smooth);
+    }
+
+    .dark-mode .stat-item {
+      background: #1a1a1a;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    }
+
+    .stat-item:hover {
+      transform: translateY(-10px);
+      box-shadow: var(--shadow-premium);
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 50px;
+      align-items: center;
     }
   </style>
 </head>
@@ -333,21 +365,26 @@
         <h2 class="section-title">Our Core Values</h2>
         <p style="color: var(--text-light); max-width: 600px; margin: 0 auto 40px;">What drives us to be the best in global adventure travel.</p>
       </div>
-      <div class="stats-grid">
-        <div class="stat-item anim-fade-up">
-          <i class="fas fa-leaf fa-3x" style="color: var(--primary-color); margin-bottom: 15px;"></i>
-          <h3 style="margin-bottom: 10px;">Sustainability</h3>
-          <p style="color: var(--text-light); font-size: 0.9rem;">We practice leave-no-trace principles on every trek.</p>
+      <div class="grid-2 align-items-center">
+        <div class="stats-grid" style="grid-template-columns: 1fr; gap: 20px;">
+          <div class="stat-item anim-fade-up">
+            <i class="fas fa-leaf fa-3x" style="color: var(--primary-color); margin-bottom: 15px;"></i>
+            <h3 style="margin-bottom: 10px;">Sustainability</h3>
+            <p style="color: var(--text-light); font-size: 0.9rem;">We practice leave-no-trace principles on every trek.</p>
+          </div>
+          <div class="stat-item anim-fade-up" style="animation-delay: 0.2s;">
+            <i class="fas fa-shield-alt fa-3x" style="color: var(--primary-color); margin-bottom: 15px;"></i>
+            <h3 style="margin-bottom: 10px;">Safety First</h3>
+            <p style="color: var(--text-light); font-size: 0.9rem;">Expert guides and premium gear ensure your safety.</p>
+          </div>
+          <div class="stat-item anim-fade-up" style="animation-delay: 0.4s;">
+            <i class="fas fa-mountain fa-3x" style="color: var(--primary-color); margin-bottom: 15px;"></i>
+            <h3 style="margin-bottom: 10px;">Thrill Seekers</h3>
+            <p style="color: var(--text-light); font-size: 0.9rem;">Curating the most exhilarating paths in the world.</p>
+          </div>
         </div>
-        <div class="stat-item anim-fade-up" style="animation-delay: 0.2s;">
-          <i class="fas fa-shield-alt fa-3x" style="color: var(--primary-color); margin-bottom: 15px;"></i>
-          <h3 style="margin-bottom: 10px;">Safety First</h3>
-          <p style="color: var(--text-light); font-size: 0.9rem;">Expert guides and premium gear ensure your safety.</p>
-        </div>
-        <div class="stat-item anim-fade-up" style="animation-delay: 0.4s;">
-          <i class="fas fa-mountain fa-3x" style="color: var(--primary-color); margin-bottom: 15px;"></i>
-          <h3 style="margin-bottom: 10px;">Thrill Seekers</h3>
-          <p style="color: var(--text-light); font-size: 0.9rem;">Curating the most exhilarating paths in the world.</p>
+        <div class="image-wrapper anim-fade-left">
+          <img src="images/hero/hero-3.png" alt="Our Core Values" style="border-radius: 20px; width: 100%; box-shadow: var(--shadow-lg); object-fit: cover;">
         </div>
       </div>
     </div>

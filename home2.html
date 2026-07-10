@@ -138,6 +138,40 @@
       .gallery-grid { grid-template-columns: repeat(2, 1fr); }
       .gallery-item:nth-child(1) { height: 250px; }
     }
+    
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      align-items: center;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .stat-item {
+      background: #FFFFFF;
+      padding: 40px 20px;
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+      transition: transform var(--transition-smooth), box-shadow var(--transition-smooth);
+    }
+
+    .dark-mode .stat-item {
+      background: #1a1a1a;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    }
+
+    .stat-item:hover {
+      transform: translateY(-10px);
+      box-shadow: var(--shadow-premium);
+    }
+
     @media (max-width: 768px) {
       .destination-grid { grid-template-columns: 1fr; }
     }
@@ -196,10 +230,10 @@
             <li style="margin-bottom: 10px;"><i class="fas fa-check" style="color: var(--primary-color); margin-right: 10px;"></i> Immersive cultural interactions</li>
             <li style="margin-bottom: 10px;"><i class="fas fa-check" style="color: var(--primary-color); margin-right: 10px;"></i> Minimal environmental footprint</li>
           </ul>
-          <a href="about.html" class="btn btn-outline">Discover Our Ethos</a>
+          <a href="about.html" class="btn btn-secondary">Discover Our Ethos</a>
         </div>
         <div class="image-wrapper anim-fade-left">
-          <img src="images/destinations/andes.jpg" alt="Experience the Wild" style="border-radius: 10px; width: 100%; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+          <img src="images/treks/patagonia_wilderness.png" alt="Experience the Wild" style="border-radius: 10px; width: 100%; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
         </div>
       </div>
     </div>
@@ -370,7 +404,7 @@
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
         <div class="premium-card anim-fade-right" style="padding: 30px; text-align: left;">
           <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px;">
-            <img src="https://i.pinimg.com/236x/8b/1e/8f/8b1e8f2378f8c7e937d57076a08990d0.jpg" alt="Emma Stone" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover;">
+            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Emma Stone" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover;">
             <div>
               <h3 style="margin: 0; font-size: 1.1rem;">Emma Stone</h3>
               <div style="color: #FFD700; font-size: 0.9rem; margin-top: 5px;">
@@ -382,7 +416,7 @@
         </div>
         <div class="premium-card anim-fade-left" style="padding: 30px; text-align: left;">
           <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px;">
-            <img src="https://i.pinimg.com/236x/a2/e8/cf/a2e8cf38c1142e05b63bc3a65249fc2d.jpg" alt="Michael Chen" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover;">
+            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Michael Chen" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover;">
             <div>
               <h3 style="margin: 0; font-size: 1.1rem;">Michael Chen</h3>
               <div style="color: #FFD700; font-size: 0.9rem; margin-top: 5px;">

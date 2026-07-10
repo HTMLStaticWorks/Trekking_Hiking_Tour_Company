@@ -135,6 +135,11 @@
       color: #FFF;
     }
     
+    .feature-item:hover p,
+    .feature-item:hover span {
+      color: #FFF !important;
+    }
+    
     .feature-img-wrapper {
       width: 100%;
       height: 180px;
@@ -363,25 +368,25 @@
       
       <div class="features-grid">
         <!-- Beginner -->
-        <div class="feature-item anim-fade-up">
+        <div class="feature-item anim-fade-up" style="display: flex; flex-direction: column; height: 100%;">
           <i class="fas fa-hiking" style="font-size: 3rem; color: var(--accent-color); margin-bottom: 20px;"></i>
           <h3>Beginner</h3>
-          <p style="color: var(--text-light); margin-bottom: 15px;">Ideal for newcomers. Features scenic walks on well-paved trails, typically requiring 2-4 hours of walking per day.</p>
-          <span style="font-size: 0.9rem; font-weight: 600; color: var(--primary-color);">Minimal Experience Required</span>
+          <p style="color: var(--text-light); margin-bottom: auto; flex-grow: 1;">Ideal for newcomers. Features scenic walks on well-paved trails, typically requiring 2-4 hours of walking per day.</p>
+          <span style="font-size: 0.9rem; font-weight: 600; color: var(--primary-color); margin-top: 15px;">Minimal Experience Required</span>
         </div>
         <!-- Intermediate -->
-        <div class="feature-item anim-fade-up" style="transition-delay: 0.2s">
+        <div class="feature-item anim-fade-up" style="transition-delay: 0.2s; display: flex; flex-direction: column; height: 100%;">
           <i class="fas fa-mountain" style="font-size: 3rem; color: var(--accent-color); margin-bottom: 20px;"></i>
           <h3>Intermediate</h3>
-          <p style="color: var(--text-light); margin-bottom: 15px;">For the active adventurer. Expect uneven terrain, moderate altitude, and 4-7 hours of hiking daily.</p>
-          <span style="font-size: 0.9rem; font-weight: 600; color: var(--primary-color);">Good Fitness Required</span>
+          <p style="color: var(--text-light); margin-bottom: auto; flex-grow: 1;">For the active adventurer. Expect uneven terrain, moderate altitude, and 4-7 hours of hiking daily.</p>
+          <span style="font-size: 0.9rem; font-weight: 600; color: var(--primary-color); margin-top: 15px;">Good Fitness Required</span>
         </div>
         <!-- Advanced -->
-        <div class="feature-item anim-fade-up" style="transition-delay: 0.4s">
+        <div class="feature-item anim-fade-up" style="transition-delay: 0.4s; display: flex; flex-direction: column; height: 100%;">
           <i class="fas fa-mountain-sun" style="font-size: 3rem; color: var(--accent-color); margin-bottom: 20px;"></i>
           <h3>Advanced</h3>
-          <p style="color: var(--text-light); margin-bottom: 15px;">For experienced trekkers. High altitudes, steep ascents, and multi-day endurance challenges.</p>
-          <span style="font-size: 0.9rem; font-weight: 600; color: var(--primary-color);">Excellent Fitness Required</span>
+          <p style="color: var(--text-light); margin-bottom: auto; flex-grow: 1;">For experienced trekkers. High altitudes, steep ascents, and multi-day endurance challenges.</p>
+          <span style="font-size: 0.9rem; font-weight: 600; color: var(--primary-color); margin-top: 15px;">Excellent Fitness Required</span>
         </div>
       </div>
     </div>
