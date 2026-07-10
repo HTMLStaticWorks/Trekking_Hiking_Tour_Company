@@ -220,8 +220,9 @@
 
 /* Tablet 2-column grid fix for 3rd card */
 @media screen and (min-width: 630px) and (max-width: 992px) {
-  .premium-card:last-child:nth-child(3),
-  .pricing-card:last-child:nth-child(3) {
+  .treks-grid .premium-card:last-child:nth-child(3),
+  [style*="display: grid"] > .premium-card:last-child:nth-child(3),
+  .pricing-grid .pricing-card:last-child:nth-child(3) {
     grid-column: 1 / -1;
     justify-self: center;
     width: calc(50% - 15px);
