@@ -173,6 +173,10 @@
   .newsletter-form .btn, .hero-btns .btn {
     width: 100%;
   }
+
+  .card-content .btn {
+    align-self: center;
+  }
 }
 
 /* Responsive Service Text Alignments & Bullet List Alignment */

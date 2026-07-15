@@ -539,6 +539,12 @@ img {
   position: relative;
 }
 
+.premium-card:not([style*="display: flex"]) {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
 .premium-card:hover {
   transform: translateY(-10px);
   box-shadow: var(--shadow-premium);
@@ -564,6 +570,14 @@ img {
 
 .card-content {
   padding: 30px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.card-content .btn {
+  margin-top: auto;
+  align-self: flex-start;
 }
 
 /* Input Fields */
